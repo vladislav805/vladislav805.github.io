@@ -1,0 +1,28 @@
+.timeline--wrapper {
+    // todo
+}
+
+.timeline {
+    /*&::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: calc(33% + 6px);
+        bottom: 0px;
+        width: 0px;
+        border: 2px solid;
+
+        @media only screen and (max-width: 768px) {
+            left: calc(1% + 6px);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }*/
+
+    display: flex;
+    flex-flow: column nowrap;
+}

@@ -1,0 +1,22 @@
+$breakpoint-mobile: 580px;
+$breakpoint-pad: 680px;
+
+/**
+ * Headers h1-h3
+ */
+@mixin font-size-with-media($mobile, $pad, $desktop) {
+    font-size: $mobile;
+
+    @media screen and (min-width: $breakpoint-mobile) {
+        font-size: $pad;
+    }
+
+    @media screen and (min-width: $breakpoint-pad) {
+        font-size: $desktop;
+    }
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

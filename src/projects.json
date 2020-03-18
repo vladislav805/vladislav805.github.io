@@ -1,0 +1,236 @@
+[
+    {
+        "id": 1,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 2,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 3,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 4,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 5,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 6,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 7,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 8,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    },
+    {
+        "id": 9,
+        "title": "APIdog",
+        "description": [
+            "Клиент для VK – ",
+            "Альтернативный многофункциональный веб-клиент для социальной сети ВКонтакте, работающий на API и написанный почти полностью на JavaScript."
+        ],
+        "view": {
+            "url": "https://apidog.ru/",
+            "label": "Перейти"
+        },
+        "status": {
+            "active": false,
+            "since": "2012",
+            "until": "2019"
+        },
+        "image": {
+            "url": "/images/apidog.svg",
+            "position": "l",
+            "width": 180,
+            "height": 45
+        },
+        "background": {
+            "color": "#567ca4"
+        }
+    }
+]
