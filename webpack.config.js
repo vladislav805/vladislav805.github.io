@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -87,20 +88,24 @@ module.exports = {
             filename: 'static/css/[name].css',
             chunkFilename: 'static/css/[id].css',
         }),
-        /*new webpack.LoaderOptionsPlugin({
+        new webpack.LoaderOptionsPlugin({
             minimize: true,
             debug: false,
-        }),*/
+        }),
         new webpack.EnvironmentPlugin({
             VERSION: process.env.npm_package_version,
         }),
-
         new HtmlWebpackPlugin({
             template: path.resolve('public', 'index.html'),
             chunks: ['main'],
             minify: true,
             filename: 'index.html',
         }),
+        new CopyPlugin([{
+            from: path.resolve('src', 'images'),
+            to: path.resolve('dist', 'static', 'images'),
+            test: /\.svg$/,
+        }]),
     ],
 
     devtool: '#sourcemap',
