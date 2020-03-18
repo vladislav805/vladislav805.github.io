@@ -27,6 +27,7 @@ export default class TimelineProjects extends React.Component<ITimelineProjectsP
     render() {
         return (
             <div className="timeline-projects">
+                <h2>Timeline: work and projects</h2>
                 <Timeline animate={true}>
                     {this.props.items.map(entry => (
                         <TimelineEntry
