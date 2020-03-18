@@ -13,23 +13,21 @@ type IContactItemProps = {
 }
 
 const ContactItem = ({ label, icon, link }: IContactItemProps) => (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="contact">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="contact-item">
         <Icon path={icon} size={2} />
-        <span className="contact-label">{label}</span>
+        <span className="contact-item-label">{label}</span>
     </a>
 );
 
+const Contacts = () => (
+    <div className="contact">
+        <h2>Contact with me</h2>
+        <div className="contact-list">
+            <ContactItem icon={mdiTelegram} label={`@vladislav805`} link="tg://resolve?domain=vladislav805" />
+            <ContactItem icon={mdiEmailOutline} label={`vlad@velu.ga`} link="mailto:vlad@velu.ga" />
+            <ContactItem icon={mdiGithub} label={`vladislav805`} link="https://github.com/vladislav805" />
+        </div>
+    </div>
+);
 
-export default class Contacts extends React.Component<IContactsProps, IContactsState> {
-    render() {
-        return (
-            <>
-                <div className="contacts">
-                    <ContactItem icon={mdiTelegram} label={`@vladislav805`} link="tg://resolve?domain=vladislav805" />
-                    <ContactItem icon={mdiEmailOutline} label={`vlad@velu.ga`} link="mailto:vlad@velu.ga" />
-                    <ContactItem icon={mdiGithub} label={`vladislav805`} link="https://github.com/vladislav805" />
-                </div>
-            </>
-        );
-    }
-}
+export default Contacts;

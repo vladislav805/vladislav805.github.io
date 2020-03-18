@@ -1,33 +1,33 @@
-.contacts {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-
-    padding: 5vh 2vw;
-
-    background: #ffffff;
-
-    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .1);
-}
-
 .contact {
-    $height: 30px;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 0 20px;
 
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    flex-grow: 33.33%;
+    &-list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
 
-    line-height: $height;
+        padding: 5vh 2vw;
 
-    text-decoration: none;
-    color: #000000;
+        background: #ffffff;
+    }
 
-    &-label {
-        margin-left: 8px;
+    &-item {
+        $height: 30px;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        flex-grow: 33.33%;
+
+        line-height: $height;
+
+        text-decoration: none;
+        color: #000000;
+
     }
 }
-

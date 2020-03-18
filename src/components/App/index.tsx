@@ -3,12 +3,10 @@ import { IProject } from '../../types/project';
 import Header from '../Header';
 import Contacts from '../Contacts';
 import About from '../About';
-// import ProjectsSlider from '../ProjectsSlider';
 import TimelineProjects from '../TimelineProjects';
 import Footer from '../Footer';
 
 import projects from '../../projects';
-
 
 type IAppProps = {};
 
@@ -22,18 +20,16 @@ export default class App extends React.Component<IAppProps, IAppState> {
     };
 
     componentDidMount() {
-        this.setState({ projects: projects as IProject[] });
+        this.setState({ projects });
     }
 
     render() {
-        console.log(this.state.projects);
         return (
             <>
                 <Header />
-                <Contacts />
                 <About />
+                <Contacts />
                 <TimelineProjects items={this.state.projects} />
-                { /* <ProjectsSlider items={this.state.projects} /> */ }
                 <Footer />
             </>
         );
