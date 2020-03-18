@@ -45,6 +45,7 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ],
+                sideEffects: true,
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
@@ -59,7 +60,7 @@ module.exports = {
     },
 
     optimization: {
-        //minimize: isProduction,
+        minimize: isProduction,
         minimizer: [
             new TerserPlugin({ extractComments: false }),
         ],
