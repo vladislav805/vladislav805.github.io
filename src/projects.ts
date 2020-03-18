@@ -1,4 +1,5 @@
 import { IProject } from './types/project';
+import { Tech } from './types/tech';
 
 export default [
     {
@@ -18,7 +19,8 @@ export default [
             "width": 129,
             "height": 50
         },
-        "dateColor": "#ee252c"
+        "dateColor": "#ee252c",
+        "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK]
     },
     {
         "id": 25,
@@ -34,7 +36,8 @@ export default [
             "active": true,
             "since": "2015/06"
         },
-        "dateColor": "#009688"
+        "dateColor": "#009688",
+        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
     },
     {
         "id": 27,
@@ -51,7 +54,8 @@ export default [
             "since": "2017/12",
             "until": "2019"
         },
-        "dateColor": "linear-gradient(to right, #005aaa, #ab3a8d)"
+        "dateColor": "linear-gradient(to right, #005aaa, #ab3a8d)",
+        "used": [Tech.PHP]
     },
     {
         "id": 30,
@@ -68,7 +72,8 @@ export default [
             "active": true,
             "since": "2013"
         },
-        "dateColor": "#303030"
+        "dateColor": "#303030",
+        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
     },
     {
         "id": 10,
@@ -90,6 +95,7 @@ export default [
             "width": 248,
             "height": 62
         },
-        "dateColor": "#567ca4"
+        "dateColor": "#567ca4",
+        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
     },
 ] as IProject[];

@@ -1,3 +1,5 @@
+import { Tech } from './tech';
+
 export interface IProject {
     id: number;
     title: string;
@@ -6,6 +8,7 @@ export interface IProject {
     status: IProjectStatus;
     logo: IProjectLogo;
     dateColor: string;
+    used: Tech[];
 }
 
 export interface IProjectViewLink {

@@ -2,6 +2,7 @@ import * as React from 'react';
 import './style.scss';
 import { IProject } from '../../types/project';
 import { Timeline, TimelineEntry } from '../Timeline';
+import TechList from '../TechList';
 
 type ITimelineProjectsProps = {
     items: IProject[];
@@ -35,7 +36,8 @@ export default class TimelineProjects extends React.Component<ITimelineProjectsP
                             logo={entry.logo}
                             link={entry.view}
                             dateColor={entry.dateColor}>
-                            {entry.description.map((desc, i)=> <p key={i}>{desc}</p>)}
+                            {entry.description.map((desc, i) => <p key={i}>{desc}</p>)}
+                            <TechList items={entry.used} />
                         </TimelineEntry>
                     ))}
                 </Timeline>

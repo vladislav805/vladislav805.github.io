@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './style.scss';
-import TechList, { Tech } from '../TechList';
+import TechList from '../TechList';
+import { Tech } from '../../types/tech';
 
 type IAboutProps = {};
 type IAboutState = {};

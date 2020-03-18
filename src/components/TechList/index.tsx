@@ -1,21 +1,7 @@
 import * as React from 'react';
 import Icon from '@mdi/react';
 import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiLanguageTypescript, mdiSass, mdiReact, mdiWebpack, mdiLanguagePhp, mdiMicrosoftVisualStudioCode, mdiAndroid } from '@mdi/js';
-
-
-
-export const enum Tech {
-    HTML5,
-    CSS3,
-    JS,
-    TS,
-    SCSS,
-    REACT,
-    WEBPACK,
-    PHP,
-    VSC,
-    ANDROID
-}
+import { Tech } from '../../types/tech';
 
 type ISkillsProps = {
     items: Tech[];
@@ -39,7 +25,7 @@ const TechList = ({ items }: ISkillsProps) => (
         {items.map((icon, i) => (
             <Icon
                 key={i}
-                color={'gray'}
+                color="#555555"
                 path={icons[icon]}
                 size={2} />
         ))}
