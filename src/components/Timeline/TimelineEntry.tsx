@@ -5,7 +5,17 @@ import './TimelineEntry.scss';
 
 type ITimelineEntryProps = {
     date: string;
-    label: string;
+    title: string;
+    logo?: {
+        src: string;
+        width: number;
+        height: number;
+    };
+    link?: {
+        href: string;
+        label: string;
+    };
+    dateColor?: string;
 };
 
 type ITimelineEntryState = {
@@ -24,8 +34,9 @@ export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelin
     };
 
     render() {
-        const { children, date, label } = this.props;
         const { visible } = this.state;
+        const { children, date, title, dateColor, logo, link } = this.props;
+
         const clsVisibility = visible ? 'timeline-entry__show' : 'timeline-entry__hidden';
         return (
             <div className="timeline-entry">
@@ -37,14 +48,22 @@ export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelin
                         <div className={classNames('timeline-entry-date-wrap', clsVisibility)}>
                             <time
                                 className="timeline-entry-date"
-                                style={{background: '#76bb7f'}}
+                                style={{background: dateColor}}
                                 title={date}>
                                 {date}
                             </time>
                         </div>
-                        <div className="timeline-entry-content">
-                            <div className={classNames('timeline-entry-body', clsVisibility)}>
+                        <div className={classNames('timeline-entry-content', clsVisibility)}>
+                            {logo ? (
+                                <div className="timeline-entry-image">
+                                    <img {...logo} alt="" />
+                                </div>
+                            ) : (
+                                <h2>{title}</h2>
+                            )}
+                            <div className="timeline-entry-body">
                                 {children}
+                                {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className="timeline-entry-link">{link.label}</a>}
                             </div>
                         </div>
                     </React.Fragment>

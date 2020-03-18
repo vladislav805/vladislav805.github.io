@@ -8,48 +8,38 @@ type ITimelineProjectsProps = {
 };
 
 export default class TimelineProjects extends React.Component<ITimelineProjectsProps> {
-    render() {
-        //const [ project ] = this.props.items;
 
+    private renderDate = (project: IProject) => {
+        const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+        return [project.status.since, project.status.until]
+            .filter(Boolean)
+            .map(date => {
+                const [year, month, day] = date.split('/').map(Number);
+
+                return [day, months[month - 1], year].filter(Boolean).join(' ');
+            })
+            .concat(['now'])
+            .slice(0, 2)
+            .join(' — ');
+    };
+
+    render() {
         return (
             <div className="timeline-projects">
                 <Timeline animate={true}>
-                    <TimelineEntry date="01.01.2020" label="Test">
-                        <h3>Header</h3>
-                        <p>escription</p>
-                    </TimelineEntry>
-                    <TimelineEntry date="01.01.2020" label="Test">
-                        <h3>Header</h3>
-                        <p>escription</p>
-                    </TimelineEntry>
-                    <TimelineEntry date="01.01.2020" label="Test">
-                        <h3>Header</h3>
-                        <p>escription</p>
-                    </TimelineEntry>
-                    <TimelineEntry date="01.01.2020" label="Test">
-                        <h3>Header</h3>
-                        <p>escription</p>
-                    </TimelineEntry>
+                    {this.props.items.map(entry => (
+                        <TimelineEntry
+                            key={entry.id}
+                            title={entry.title}
+                            date={this.renderDate(entry)}
+                            logo={entry.logo}
+                            link={entry.view}
+                            dateColor={entry.dateColor}>
+                            {entry.description.map((desc, i)=> <p key={i}>{desc}</p>)}
+                        </TimelineEntry>
+                    ))}
                 </Timeline>
             </div>
         );
-
-
-        /*return (
-            <div className="timeline">
-                <div className="timeline-entry">
-                    <div className="timeline-logo">
-                        <img src={project.image.url} width={project.image.width} height={project.image.height} />
-                    </div>
-                    <div className="timeline-line">
-                        <div className="timeline-date">{project.status.until || project.status.since}</div>
-                    </div>
-                    <div className="timeline-content">
-                        <h2>{project.title}</h2>
-                        <p>{project.description}</p>
-                    </div>
-                </div>
-            </div>
-        );*/
     }
 }

@@ -7,7 +7,7 @@ import About from '../About';
 import TimelineProjects from '../TimelineProjects';
 import Footer from '../Footer';
 
-import * as projects from '../../projects.json';
+import projects from '../../projects';
 
 
 type IAppProps = {};
@@ -26,6 +26,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
     }
 
     render() {
+        console.log(this.state.projects);
         return (
             <>
                 <Header />

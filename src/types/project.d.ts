@@ -4,12 +4,12 @@ export interface IProject {
     description: string[];
     view: IProjectViewLink;
     status: IProjectStatus;
-    image: IProjectImage;
-    background: IProjectBackground;
+    logo: IProjectLogo;
+    dateColor: string;
 }
 
 export interface IProjectViewLink {
-    url: string;
+    href: string;
     label: string;
 }
 
@@ -19,9 +19,8 @@ export interface IProjectStatus {
     until?: string;
 }
 
-export interface IProjectImage {
-    url: string;
-    position: 'l' | 'r';
+export interface IProjectLogo {
+    src: string;
     width: number;
     height: number;
 }
