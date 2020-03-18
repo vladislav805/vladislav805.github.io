@@ -26,7 +26,9 @@ export default [
         "id": 25,
         "title": "Sights map",
         "description": [
-            "A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, Krasnodar, Veliky Novgorod and not only"
+            "A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, Krasnodar, Veliky Novgorod and not only",
+            "",
+            "The code is currently being rewritten using newer technologies."
         ],
         "view": {
             "href": "https://sights.vlad805.ru/",
@@ -37,7 +39,24 @@ export default [
             "since": "2015/06"
         },
         "dateColor": "#009688",
-        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
+        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP, Tech.TELEGRAM]
+    },
+    {
+        "id": 30,
+        "title": "RFM radio app",
+        "description": [
+            "Android application for using hardware radio on smartphones with QualComm processors."
+        ],
+        "view": {
+            "href": "http://rfm.velu.ga/",
+            "label": "Open"
+        },
+        "status": {
+            "active": true,
+            "since": "2019/07"
+        },
+        "dateColor": "#2978fd",
+        "used": [Tech.ANDROID]
     },
     {
         "id": 27,
@@ -55,7 +74,44 @@ export default [
             "until": "2019"
         },
         "dateColor": "linear-gradient(to right, #005aaa, #ab3a8d)",
-        "used": [Tech.PHP]
+        "used": [Tech.PHP, Tech.TELEGRAM]
+    },
+    {
+        "id": 14,
+        "title": "Bot for Telegram: #КороткийМетр",
+        "description": [
+            "Guide and adviser on shortfilms from the Telegram channel #КороткоеКино",
+            "Автор — Надя Иванова; реализация — я"
+        ],
+        "view": {
+            "href": "tg://resolve?domain=FilmShortBot",
+            "label": "Open"
+        },
+        "status": {
+            "active": false,
+            "since": "2017/06",
+            "until": "2017/06"
+        },
+        "dateColor": "#0000ff",
+        "used": [Tech.PHP, Tech.TELEGRAM]
+    },
+    {
+        "id": 11,
+        "title": "Site for Nadia Ivanova",
+        "description": [
+            "Сайт-визитка для режиссера."
+        ],
+        "view": {
+            "href": "https://nadiaivanova.ru/",
+            "label": "Open"
+        },
+        "status": {
+            "active": false,
+            "since": "2017/06",
+            "until": "2017/06"
+        },
+        "dateColor": "#c74c69",
+        "used": [Tech.HTML5, Tech.CSS3, Tech.PHP]
     },
     {
         "id": 30,
@@ -80,7 +136,8 @@ export default [
         "title": "APIdog",
         "description": [
             "APIdog — web client for VK",
-            "An alternative multifunctional web client for the VK social network, using API and written almost entirely in Vanilla JavaScript."
+            "An alternative multifunctional web client for the VK social network, using API and written almost entirely in Vanilla JavaScript.",
+            "Site support was discontinued around 2017. Site is still available."
         ],
         "view": {
             "href": "https://apidog.ru/",
@@ -96,6 +153,6 @@ export default [
             "height": 62
         },
         "dateColor": "#567ca4",
-        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
+        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP, Tech.VK]
     },
 ] as IProject[];
