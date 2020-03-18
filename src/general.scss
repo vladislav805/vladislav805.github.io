@@ -1,3 +1,5 @@
+@import './common.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,20 @@
 body {
     font: {
         family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-        size: 15px;
+        size: 13px;
     }
+
+    @media screen and (min-width: $breakpoint-pad) {
+        font-size: 15px;
+    }
+}
+
+h2 {
+    margin: 55px 0 5px;
+    text-align: center;
+    font-size: 2.8em;
+}
+
+p {
+    line-height: 1.5;
 }
