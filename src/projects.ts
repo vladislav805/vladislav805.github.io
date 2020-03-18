@@ -15,7 +15,7 @@ export default [
             "until": "2019/11/27"
         },
         "logo": {
-            "src": "/images/yandex.svg",
+            "src": "static/images/yandex.svg",
             "width": 129,
             "height": 50
         },
@@ -148,7 +148,7 @@ export default [
             "since": "2012/08/07"
         },
         "logo": {
-            "src": "/images/apidog.svg",
+            "src": "static/images/apidog.svg",
             "width": 248,
             "height": 62
         },
