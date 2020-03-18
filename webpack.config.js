@@ -20,7 +20,7 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'static/js/[name].js',
-        publicPath: '/',
+        publicPath: './',
     },
 
     module: {
@@ -57,6 +57,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
+                            publicPath: 'static/images/',
                             outputPath: 'static/images/',
                         },
                     },
