@@ -20,13 +20,13 @@ export default [
             "height": 50
         },
         "dateColor": "#ee252c",
-        "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK]
+        "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK, Tech.ESLINT]
     },
     {
         "id": 25,
         "title": "Sights map",
         "description": [
-            "A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostow-on-Don, Krasnodar, Veliky Novgorod and not only"
+            "A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, Krasnodar, Veliky Novgorod and not only"
         ],
         "view": {
             "href": "https://sights.vlad805.ru/",

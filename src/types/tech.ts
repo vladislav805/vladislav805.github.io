@@ -6,6 +6,7 @@ export const enum Tech {
     SCSS,
     REACT,
     WEBPACK,
+    ESLINT,
     PHP,
     VSC,
     ANDROID
