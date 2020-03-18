@@ -25,7 +25,7 @@ export default class Contacts extends React.Component<IContactsProps, IContactsS
         return (
             <>
                 <div className="contacts">
-                    <ContactItem icon={mdiTelegram} label={`@vladislav805`} link="https://t.me/vladislav805" />
+                    <ContactItem icon={mdiTelegram} label={`@vladislav805`} link="tg://resolve?domain=vladislav805" />
                     <ContactItem icon={mdiEmailOutline} label={`vlad@velu.ga`} link="mailto:vlad@velu.ga" />
                     <ContactItem icon={mdiGithub} label={`vladislav805`} link="https://github.com/vladislav805" />
                 </div>

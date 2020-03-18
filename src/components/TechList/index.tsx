@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Icon from '@mdi/react';
-import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiLanguageTypescript, mdiSass, mdiReact, mdiWebpack, mdiEslint, mdiLanguagePhp, mdiMicrosoftVisualStudioCode, mdiAndroid } from '@mdi/js';
+import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiLanguageTypescript, mdiSass, mdiReact, mdiWebpack, mdiEslint, mdiLanguagePhp, mdiMicrosoftVisualStudioCode, mdiAndroid, mdiVk, mdiTelegram } from '@mdi/js';
 import { Tech } from '../../types/tech';
 import './TechList.scss';
 
@@ -19,7 +19,9 @@ const icons: Record<Tech, string> = {
     [Tech.ESLINT]: mdiEslint,
     [Tech.PHP]: mdiLanguagePhp,
     [Tech.VSC]: mdiMicrosoftVisualStudioCode,
-    [Tech.ANDROID]: mdiAndroid
+    [Tech.ANDROID]: mdiAndroid,
+    [Tech.VK]: mdiVk,
+    [Tech.TELEGRAM]: mdiTelegram
 };
 
 const names: Record<Tech, string> = {
@@ -33,7 +35,9 @@ const names: Record<Tech, string> = {
     [Tech.ESLINT]: 'ESLint',
     [Tech.PHP]: 'PHP',
     [Tech.VSC]: 'Visual Studio Code',
-    [Tech.ANDROID]: 'Android'
+    [Tech.ANDROID]: 'Android',
+    [Tech.VK]: 'VK API',
+    [Tech.TELEGRAM]: 'Telegram Bot API'
 };
 
 const TechList = ({ items }: ISkillsProps) => (

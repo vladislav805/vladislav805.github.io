@@ -59,7 +59,7 @@ export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelin
                                     <img {...logo} alt="" />
                                 </div>
                             ) : (
-                                <h2>{title}</h2>
+                                <h3>{title}</h3>
                             )}
                             <div className="timeline-entry-body">
                                 {children}

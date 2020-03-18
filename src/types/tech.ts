@@ -9,5 +9,8 @@ export const enum Tech {
     ESLINT,
     PHP,
     VSC,
-    ANDROID
+    ANDROID,
+
+    VK,
+    TELEGRAM
 }

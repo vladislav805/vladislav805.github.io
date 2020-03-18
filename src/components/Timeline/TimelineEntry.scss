@@ -29,10 +29,9 @@ $arrow-shift: 14px;
 $width-date: 250px;
 $height-date: 50px;
 
-$line-dot-left: #{$width-date + 10px};
+$line-margin: 20px;
+$line-dot-left: #{$width-date + $line-margin};
 $dot-size: 8px;
-
-$touch-breakpoint: 680px;
 
 .timeline-entry {
     display: flex;
@@ -41,7 +40,7 @@ $touch-breakpoint: 680px;
 
     padding-left: #{$dot-size * 4};
 
-    @media screen and (min-width: $touch-breakpoint) {
+    @media screen and (min-width: $breakpoint-pad) {
         flex-direction: row;
         padding-left: unset;
     }
@@ -58,22 +57,28 @@ $touch-breakpoint: 680px;
             // flex-grow: 1;
             max-width: 90%;
 
-            @media screen and (min-width: $touch-breakpoint) {
+            @media screen and (min-width: $breakpoint-pad) {
                 width: $width-date;
             }
         }
 
         display: inline-block;
-        line-height: $height-date;
-        background: #e86971;
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: bold;
+        height: $height-date;
+
         padding: 0 #{$arrow-shift + 2px};
+
+        background: #e86971;
+
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: $height-date;
+        color: #fff;
+        white-space: nowrap;
+
 
         @include block-arrow(left);
 
-        @media screen and (min-width: $touch-breakpoint) {
+        @media screen and (min-width: $breakpoint-pad) {
             width: 100%;
 
             @include block-arrow(right);
@@ -87,10 +92,12 @@ $touch-breakpoint: 680px;
         flex-flow: column nowrap;
         flex: 1;
 
-        margin: 12px $arrow-shift 0;
+        margin: 12px $arrow-shift 2em;
 
-        @media screen and (min-width: $touch-breakpoint) {
-            margin: 0 #{$arrow-shift * 2.57};
+        @media screen and (min-width: $breakpoint-pad) {
+            margin-top: 0;
+            margin-left: #{$arrow-shift * 2 + $dot-size + $line-margin};
+            margin-right: #{$arrow-shift * 1.5};
         }
 
         &::after {
@@ -98,27 +105,21 @@ $touch-breakpoint: 680px;
             display: table;
             clear: both;
         }
+
+        h3 {
+            display: flex;
+            align-items: center;
+
+            min-height: 50px;
+
+            font-size: 2rem;
+            line-height: 36px;
+        }
     }
 
     &-body {
-        margin: 0 0 2em;
+        margin-top: .5em;
         color: #222222;
-
-        p {
-            line-height: 1.4em;
-        }
-
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 1.7rem;
-        }
     }
 
     &-image {
@@ -203,7 +204,7 @@ $touch-breakpoint: 680px;
         }
     }
 
-    @media screen and (min-width: $touch-breakpoint) {
+    @media screen and (min-width: $breakpoint-pad) {
         .timeline__withAnimation &__show#{'.timeline-entry-date-wrap'} {
             animation: timeline-show-left .4s;
         }

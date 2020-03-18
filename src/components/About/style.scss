@@ -1,3 +1,10 @@
 .about {
-    padding: 10px;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 0 20px;
+    overflow: hidden; // для предотвращения появления горизорнтального скролла от тултипа .tech-item
+
+    .tech {
+        justify-content: center;
+    }
 }
