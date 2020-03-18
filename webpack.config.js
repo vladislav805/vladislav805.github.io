@@ -19,6 +19,7 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'static/js/[name].js',
+        publicPath: '/',
     },
 
     module: {
@@ -50,7 +51,15 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
                 exclude: /(node_modules)/,
-                use: ['file-loader'],
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '/static/images/',
+                        },
+                    },
+                ],
             },
         ],
     },
