@@ -99,7 +99,7 @@ export default [
         "id": 11,
         "title": "Site for Nadia Ivanova",
         "description": [
-            "Сайт-визитка для режиссера."
+            "Site card for the film director."
         ],
         "view": {
             "href": "https://nadiaivanova.ru/",
