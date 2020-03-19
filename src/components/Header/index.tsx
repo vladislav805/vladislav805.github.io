@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './style.scss';
 import photo from '../../images/photo-main.jpg';
+import { staticUrl } from '../../utils';
 
 type IHeaderProps = {};
 type IHeaderState = {};
@@ -11,7 +12,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
             <div className="header">
                 <div className="header-content">
                     <div className="header-photo">
-                        <img src={photo} alt="Photo" />
+                        <img src={staticUrl(photo)} alt="Photo" />
                     </div>
                     <div className="header-aside">
                         <h1 className="header-name">Vladislav Veluga</h1>

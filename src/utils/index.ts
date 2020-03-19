@@ -1,1 +1,1 @@
-export const getUrl = (url: string) => `https://velu.ga/${url}`;
+export const staticUrl = (url: string) => url.replace('..', 'static');

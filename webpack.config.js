@@ -5,6 +5,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const PATH = (_static => ({
+    SRC: path.resolve('src'),
+    DIST: path.resolve('dist'),
+    ROOT: path.resolve('.'),
+    STATIC: _static,
+    STATIC_CSS: `${_static}/css`,
+    STATIC_IMAGES: `${_static}/images`
+}))('static');
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 const mode = isProduction ? 'production' : 'development';
@@ -12,15 +21,15 @@ const mode = isProduction ? 'production' : 'development';
 module.exports = {
     mode,
     target: 'web',
+    context: PATH.SRC,
 
     entry: {
-        main: path.resolve('src', 'index.tsx'),
+        main: path.resolve(PATH.SRC, 'index.tsx'),
     },
 
     output: {
-        path: path.resolve('dist'),
-        filename: './static/js/[name].js',
-
+        path: PATH.DIST,
+        filename: `${PATH.STATIC}/js/[name].js`,
     },
 
     module: {
@@ -49,31 +58,24 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
-                        options: {
-                            url: false, // костыль для url()
-                        },
                     },
                     {
                         loader: 'sass-loader',
-                        options: {
-                            sassOptions: {
-                                url: false // костыль для url()
-                            },
-                        },
                     },
                 ],
                 sideEffects: true,
             },
             {
-                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 exclude: /(node_modules)/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: './static/images/',
-                            outputPath: './static/images/',
+                            useRelativePath: true,
+                            publicPath: url => path.join(path.relative(PATH.STATIC_CSS, PATH.STATIC_IMAGES), url),
+                            outputPath: PATH.STATIC_IMAGES,
                         },
                     },
                 ],
@@ -101,8 +103,8 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './static/css/[name].css',
-            chunkFilename: './static/css/[id].css',
+            filename: `${PATH.STATIC_CSS}/[name].css`,
+            chunkFilename: `${PATH.STATIC_CSS}/[id].css`,
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true,
