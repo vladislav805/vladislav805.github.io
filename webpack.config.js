@@ -19,8 +19,8 @@ module.exports = {
 
     output: {
         path: path.resolve('dist'),
-        filename: 'static/js/[name].js',
-        publicPath: './',
+        filename: './static/js/[name].js',
+
     },
 
     module: {
@@ -42,10 +42,25 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
+                    isProduction ? {
+                        loader: MiniCssExtractPlugin.loader,
+                    } : {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false, // костыль для url()
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                url: false // костыль для url()
+                            },
+                        },
+                    },
                 ],
                 sideEffects: true,
             },
@@ -57,8 +72,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: 'static/images/',
-                            outputPath: 'static/images/',
+                            publicPath: './static/images/',
+                            outputPath: './static/images/',
                         },
                     },
                 ],
@@ -86,8 +101,8 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'static/css/[name].css',
-            chunkFilename: 'static/css/[id].css',
+            filename: './static/css/[name].css',
+            chunkFilename: './static/css/[id].css',
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true,
