@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './style.scss';
-import photo from '../../images/photo-main.jpg';
+import photo from '../../images/photo-main.webp';
 import { staticUrl } from '../../utils';
 
 type IHeaderProps = {};

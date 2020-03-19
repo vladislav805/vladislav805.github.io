@@ -66,7 +66,7 @@ module.exports = {
                 sideEffects: true,
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg|webp)$/i,
                 exclude: /(node_modules)/,
                 use: [
                     {
