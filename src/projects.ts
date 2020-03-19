@@ -80,8 +80,8 @@ export default [
         "id": 14,
         "title": "Bot for Telegram: #КороткийМетр",
         "description": [
-            "Guide and adviser on shortfilms from the Telegram channel #КороткоеКино",
-            "Автор — Надя Иванова; реализация — я"
+            "Guide and adviser on shortfilms from the Telegram channel #КороткоеКино.",
+            "Author of an idea — Nadia Ivanova; implementation — me."
         ],
         "view": {
             "href": "tg://resolve?domain=FilmShortBot",
