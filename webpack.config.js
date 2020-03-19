@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const Critters = require('critters-webpack-plugin');
 
 const PATH = (_static => ({
     SRC: path.resolve('src'),
@@ -116,8 +117,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve('public', 'index.html'),
             chunks: ['main'],
-            minify: true,
+            minify: {
+                collapseWhitespace: true,
+                html5: true,
+            },
             filename: 'index.html',
+            scriptLoading: 'defer',
+            inject: true,
+        }),
+        new Critters({
+            preload: 'swap',
         }),
         new CopyPlugin([{
             from: path.resolve('src', 'images'),
