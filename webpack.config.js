@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const Critters = require('critters-webpack-plugin');
 
 const PATH = (_static => ({
     SRC: path.resolve('src'),
@@ -115,18 +114,20 @@ module.exports = {
             VERSION: process.env.npm_package_version,
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve('public', 'index.html'),
-            chunks: ['main'],
+            template: path.resolve('public', 'index.ejs'),
             minify: {
                 collapseWhitespace: true,
                 html5: true,
             },
+            inject: false,
             filename: 'index.html',
-            scriptLoading: 'defer',
-            inject: true,
-        }),
-        new Critters({
-            preload: 'swap',
+            templateParameters: (compilation, assets, options) => ({
+                title: 'Vladislav Veluga',
+                files: assets,
+                options: options,
+                webpackConfig: compilation.options,
+                webpack: compilation.getStats().toJson()
+            })
         }),
         new CopyPlugin([{
             from: path.resolve('src', 'images'),
@@ -134,7 +135,6 @@ module.exports = {
             test: /\.svg$/,
         }]),
     ],
-
     devtool: '#sourcemap',
     devServer: {
         contentBase: path.resolve('src'),
