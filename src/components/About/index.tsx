@@ -2,21 +2,23 @@ import * as React from 'react';
 import './style.scss';
 import TechList from '../TechList';
 import { Tech } from '../../types/tech';
+import locales from '../../locales';
 
 type IAboutProps = {};
 type IAboutState = {};
 
+const { header, whereIAm, webDevShort, androidDevShort, skills } = locales.about;
 
 export default class About extends React.Component<IAboutProps, IAboutState> {
     render() {
         return (
             <div className="about">
-                <h2>Who am I?</h2>
-                <p>I am a web developer from Saint-Petersburg. First-year student of SPb SUAI magistracy.</p>
-                <p>I have been developing on JavaScript/PHP since 2012. </p>
+                <h2>{header}</h2>
+                <p>{whereIAm}</p>
+                <p>{webDevShort}</p>
 
-                <p>In addition to web development, I&apos;m interested in and learning to write on Java for Android.</p>
-                <h2>Skills and tools</h2>
+                <p>{androidDevShort}</p>
+                <h2>{skills}</h2>
                 <TechList
                     items={[Tech.HTML5, Tech.CSS3, Tech.SCSS, Tech.JS, Tech.TS, Tech.REACT, Tech.ESLINT, Tech.WEBPACK, Tech.PHP, Tech.VSC, Tech.ANDROID, Tech.VK, Tech.TELEGRAM]} />
             </div>

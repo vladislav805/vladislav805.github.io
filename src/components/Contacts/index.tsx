@@ -3,14 +3,15 @@ import './Contacts.scss';
 import Icon from '@mdi/react';
 import { mdiTelegram, mdiEmailOutline, mdiGithub } from '@mdi/js';
 
-type IContactsProps = {};
-type IContactsState = {};
+import locales from '../../locales';
 
 type IContactItemProps = {
     label: string;
     icon: string;
     link: string;
 }
+
+const { header } = locales.contacts;
 
 const ContactItem = ({ label, icon, link }: IContactItemProps) => (
     <a href={link} target="_blank" rel="noopener noreferrer" className="contact-item">
@@ -21,7 +22,7 @@ const ContactItem = ({ label, icon, link }: IContactItemProps) => (
 
 const Contacts = () => (
     <div className="contact">
-        <h2>Contact me via</h2>
+        <h2>{header}</h2>
         <div className="contact-list">
             <ContactItem icon={mdiTelegram} label={`@vladislav805`} link="tg://resolve?domain=vladislav805" />
             <ContactItem icon={mdiEmailOutline} label={`vlad@velu.ga`} link="mailto:vlad@velu.ga" />

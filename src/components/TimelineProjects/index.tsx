@@ -3,15 +3,18 @@ import './style.scss';
 import { IProject } from '../../types/project';
 import { Timeline, TimelineEntry } from '../Timeline';
 import TechList from '../TechList';
+import locales from '../../locales';
 
 type ITimelineProjectsProps = {
     items: IProject[];
 };
 
+const { header, monthsShort, now, items } = locales.timeline;
+
 export default class TimelineProjects extends React.Component<ITimelineProjectsProps> {
 
     private renderDate = (project: IProject) => {
-        const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+        const months = monthsShort;
         return [project.status.since, project.status.until]
             .filter(Boolean)
             .map(date => {
@@ -19,7 +22,7 @@ export default class TimelineProjects extends React.Component<ITimelineProjectsP
 
                 return [day, months[month - 1], year].filter(Boolean).join(' ');
             })
-            .concat(['now'])
+            .concat([now])
             .slice(0, 2)
             .join(' — ');
     };
@@ -27,20 +30,23 @@ export default class TimelineProjects extends React.Component<ITimelineProjectsP
     render() {
         return (
             <div className="timeline-projects">
-                <h2>Timeline: work and projects</h2>
+                <h2>{header}</h2>
                 <Timeline animate={true}>
-                    {this.props.items.map(entry => (
-                        <TimelineEntry
-                            key={entry.id}
-                            title={entry.title}
-                            date={this.renderDate(entry)}
-                            logo={entry.logo}
-                            link={entry.view}
-                            dateColor={entry.dateColor}>
-                            {entry.description.map((desc, i) => <p key={i}>{desc}</p>)}
-                            <TechList items={entry.used} />
-                        </TimelineEntry>
-                    ))}
+                    {this.props.items.map(entry => {
+                        const { title, description, view } = items[entry.name];
+                        return (
+                            <TimelineEntry
+                                key={entry.id}
+                                title={title}
+                                date={this.renderDate(entry)}
+                                logo={entry.logo}
+                                link={entry.view && { href: entry.view.href, label: view }}
+                                dateColor={entry.dateColor}>
+                                {description.map((desc, i) => <p key={i}>{desc}</p>)}
+                                <TechList items={entry.used} />
+                            </TimelineEntry>
+                        );
+                    })}
                 </Timeline>
             </div>
         );

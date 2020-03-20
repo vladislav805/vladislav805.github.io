@@ -16,6 +16,7 @@
     "@mdi/js": "5.0.45",
     "@mdi/react": "1.3.0",
     "classnames": "2.2.6",
+    "localized-strings": "^0.2.4",
     "react": "16.13.0",
     "react-dom": "16.13.0",
     "react-process-string": "^1.2.0",

@@ -3,12 +3,8 @@ import { Tech } from './types/tech';
 
 export default [
     {
-        "id": 20,
-        "title": "Yandex",
-        "description": [
-            "Frontend trainee-developer at Yandex",
-            "Developed internal products for Yandex SERP and received the first colossal experience in the team work on the product"
-        ],
+        "id": 8,
+        "name": "yandex",
         "status": {
             "active": false,
             "since": "2019/08/07",
@@ -23,13 +19,8 @@ export default [
         "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK, Tech.ESLINT]
     },
     {
-        "id": 25,
-        "title": "Sights map",
-        "description": [
-            "A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, Krasnodar, Veliky Novgorod and not only",
-            "",
-            "The code is currently being rewritten using newer technologies."
-        ],
+        "id": 7,
+        "name": "sights",
         "view": {
             "href": "https://sights.vlad805.ru/",
             "label": "Link"
@@ -42,11 +33,8 @@ export default [
         "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP, Tech.TELEGRAM]
     },
     {
-        "id": 30,
-        "title": "RFM radio app",
-        "description": [
-            "Android application to use hardware radio on smartphones with QualComm processors."
-        ],
+        "id": 6,
+        "name": "rfm",
         "view": {
             "href": "http://rfm.velu.ga/",
             "label": "Link"
@@ -59,14 +47,11 @@ export default [
         "used": [Tech.ANDROID]
     },
     {
-        "id": 27,
-        "title": "Chat-bot for Telegram: SUAI Private Account",
-        "description": [
-            "An unofficial client-bot that works with the personal accounts of students of SUAI."
-        ],
+        "id": 5,
+        "name": "suai",
         "view": {
             "href": "tg://resolve?domain=SUAIPrivateRobot",
-            "label": "Open in Telegram"
+            "label": ""
         },
         "status": {
             "active": false,
@@ -77,15 +62,11 @@ export default [
         "used": [Tech.PHP, Tech.TELEGRAM]
     },
     {
-        "id": 14,
-        "title": "Bot for Telegram: #КороткийМетр",
-        "description": [
-            "Guide and adviser on shortfilms for the Telegram channel #КороткоеКино.",
-            "Author of an idea — Nadia Ivanova; developed by — me."
-        ],
+        "id": 4,
+        "name": "shortMeter",
         "view": {
             "href": "tg://resolve?domain=FilmShortBot",
-            "label": "Open in Telegram"
+            "label": ""
         },
         "status": {
             "active": false,
@@ -96,11 +77,8 @@ export default [
         "used": [Tech.PHP, Tech.TELEGRAM]
     },
     {
-        "id": 11,
-        "title": "Site for Nadia Ivanova",
-        "description": [
-            "Site-card for the film director."
-        ],
+        "id": 3,
+        "name": "nadia",
         "view": {
             "href": "http://nadiaivanova.ru/",
             "label": "Link"
@@ -114,12 +92,8 @@ export default [
         "used": [Tech.HTML5, Tech.CSS3, Tech.PHP]
     },
     {
-        "id": 30,
-        "title": "Online Radio Collection",
-        "description": [
-            "Simple, easy, comfortable and functional player of online radio stations. You can choose the quality, some know the current track. Able to count traffic usage approximately.",
-            "Works on both PC and mobile."
-        ],
+        "id": 2,
+        "name": "onlineRadio",
         "view": {
             "href": "https://radio.vlad805.ru/",
             "label": "Link"
@@ -132,16 +106,11 @@ export default [
         "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
     },
     {
-        "id": 10,
-        "title": "APIdog",
-        "description": [
-            "APIdog — web client for VK.com",
-            "An alternative multifunctional web client for the VK social network, using API and written almost entirely in Vanilla JavaScript.",
-            "Site developed discontinued around 2017. Site is still available."
-        ],
+        "id": 1,
+        "name": "apidog",
         "view": {
             "href": "https://apidog.ru/",
-            "label": "Link"
+            "label": ""
         },
         "status": {
             "active": false,

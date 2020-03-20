@@ -2,8 +2,9 @@ import { Tech } from './tech';
 
 export interface IProject {
     id: number;
-    title: string;
-    description: string[];
+    name: string;
+    //title: string;
+    //description: string[];
     view: IProjectViewLink;
     status: IProjectStatus;
     logo: IProjectLogo;
