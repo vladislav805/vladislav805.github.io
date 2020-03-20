@@ -21,7 +21,7 @@ const ContactItem = ({ label, icon, link }: IContactItemProps) => (
 
 const Contacts = () => (
     <div className="contact">
-        <h2>Contact with me</h2>
+        <h2>Contact me via</h2>
         <div className="contact-list">
             <ContactItem icon={mdiTelegram} label={`@vladislav805`} link="tg://resolve?domain=vladislav805" />
             <ContactItem icon={mdiEmailOutline} label={`vlad@velu.ga`} link="mailto:vlad@velu.ga" />

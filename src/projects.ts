@@ -7,7 +7,7 @@ export default [
         "title": "Yandex",
         "description": [
             "Frontend trainee-developer at Yandex",
-            "Developed internal products for Yandex SERP and received the first colossal experience in the team on the product"
+            "Developed internal products for Yandex SERP and received the first colossal experience in the team work on the product"
         ],
         "status": {
             "active": false,
@@ -32,7 +32,7 @@ export default [
         ],
         "view": {
             "href": "https://sights.vlad805.ru/",
-            "label": "Open"
+            "label": "Link"
         },
         "status": {
             "active": true,
@@ -45,11 +45,11 @@ export default [
         "id": 30,
         "title": "RFM radio app",
         "description": [
-            "Android application for using hardware radio on smartphones with QualComm processors."
+            "Android application to use hardware radio on smartphones with QualComm processors."
         ],
         "view": {
             "href": "http://rfm.velu.ga/",
-            "label": "Open"
+            "label": "Link"
         },
         "status": {
             "active": true,
@@ -62,11 +62,11 @@ export default [
         "id": 27,
         "title": "Chat-bot for Telegram: SUAI Private Account",
         "description": [
-            "An unofficial client-bot for working with the personal account of students of my university - SUAI."
+            "An unofficial client-bot that works with the personal accounts of students of SUAI."
         ],
         "view": {
             "href": "tg://resolve?domain=SUAIPrivateRobot",
-            "label": "Open"
+            "label": "Open in Telegram"
         },
         "status": {
             "active": false,
@@ -80,12 +80,12 @@ export default [
         "id": 14,
         "title": "Bot for Telegram: #КороткийМетр",
         "description": [
-            "Guide and adviser on shortfilms from the Telegram channel #КороткоеКино.",
-            "Author of an idea — Nadia Ivanova; implementation — me."
+            "Guide and adviser on shortfilms for the Telegram channel #КороткоеКино.",
+            "Author of an idea — Nadia Ivanova; developed by — me."
         ],
         "view": {
             "href": "tg://resolve?domain=FilmShortBot",
-            "label": "Open"
+            "label": "Open in Telegram"
         },
         "status": {
             "active": false,
@@ -99,11 +99,11 @@ export default [
         "id": 11,
         "title": "Site for Nadia Ivanova",
         "description": [
-            "Site card for the film director."
+            "Site-card for the film director."
         ],
         "view": {
-            "href": "https://nadiaivanova.ru/",
-            "label": "Open"
+            "href": "http://nadiaivanova.ru/",
+            "label": "Link"
         },
         "status": {
             "active": false,
@@ -117,12 +117,12 @@ export default [
         "id": 30,
         "title": "Online Radio Collection",
         "description": [
-            "Simple, easy, convenient and functional player of online radio stations. You can choose the quality, some know the current track. Able to count traffic approximately.",
+            "Simple, easy, comfortable and functional player of online radio stations. You can choose the quality, some know the current track. Able to count traffic usage approximately.",
             "Works on both PC and mobile."
         ],
         "view": {
             "href": "https://radio.vlad805.ru/",
-            "label": "Open"
+            "label": "Link"
         },
         "status": {
             "active": true,
@@ -135,13 +135,13 @@ export default [
         "id": 10,
         "title": "APIdog",
         "description": [
-            "APIdog — web client for VK",
+            "APIdog — web client for VK.com",
             "An alternative multifunctional web client for the VK social network, using API and written almost entirely in Vanilla JavaScript.",
-            "Site support was discontinued around 2017. Site is still available."
+            "Site developed discontinued around 2017. Site is still available."
         ],
         "view": {
             "href": "https://apidog.ru/",
-            "label": "Open"
+            "label": "Link"
         },
         "status": {
             "active": false,
