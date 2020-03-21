@@ -126,8 +126,16 @@ module.exports = {
                 files: assets,
                 options: options,
                 webpackConfig: compilation.options,
-                webpack: compilation.getStats().toJson()
-            })
+                metaOG: [
+                    { property: 'og:title', content: 'Vladislav Veluga' },
+                    { property: 'og:description', content: 'Web-developer from Saint-Petersburg' },
+                    { property: 'og:image', content: 'static/images/photo-main.webp' },
+                    { property: 'og:type', content: 'website' },
+                    { property: 'og:url', content: 'https://velu.ga/' },
+                    { property: 'og:locale', content: 'en_US' },
+                    { property: 'og:locale:alternate', content: 'ru_RU' },
+                ],
+            }),
         }),
         new CopyPlugin([{
             from: path.resolve('src', 'images'),
