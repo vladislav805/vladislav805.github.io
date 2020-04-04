@@ -42,6 +42,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
                 <About locale={locale} />
                 <Contacts locale={locale} />
                 <TimelineProjects locale={locale} projects={this.state.projects} />
+                <Contacts locale={locale} />
                 <Footer locale={locale} onChangeLocale={this.onChangeLocale} />
             </>
         );
