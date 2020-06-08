@@ -137,11 +137,14 @@ module.exports = {
                 ],
             }),
         }),
-        new CopyPlugin([{
-            from: path.resolve('src', 'images'),
-            to: path.resolve('dist', 'static', 'images'),
-            test: /\.svg$/,
-        }]),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve('src', 'images'),
+                    to: path.resolve('dist', 'static', 'images'),
+                },
+            ],
+        }),
     ],
     devtool: '#sourcemap',
     devServer: {

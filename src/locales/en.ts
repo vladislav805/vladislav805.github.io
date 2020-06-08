@@ -81,7 +81,7 @@ export default {
                 "description": [
                     "APIdog — web client for VK.com",
                     "An alternative multifunctional web client for the VK social network, using API and written almost entirely in Vanilla JavaScript.",
-                    "Site developed discontinued around 2017. Site is still available."
+                    "Site developed discontinued around 2017. In 2020, it was almost completely rewritten to ES6 using webpack + babel and SCSS."
                 ],
                 "view": "Link"
             }

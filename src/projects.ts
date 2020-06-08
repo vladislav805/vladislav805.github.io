@@ -89,7 +89,7 @@ export default [
             "until": "2017/06"
         },
         "dateColor": "#c74c69",
-        "used": [Tech.HTML5, Tech.CSS3, Tech.PHP]
+        "used": [Tech.HTML5, Tech.CSS3]
     },
     {
         "id": 2,
@@ -110,7 +110,7 @@ export default [
         "name": "apidog",
         "view": {
             "href": "https://apidog.ru/",
-            "label": ""
+            "label": "Link"
         },
         "status": {
             "active": false,
@@ -122,6 +122,6 @@ export default [
             "height": 62
         },
         "dateColor": "#567ca4",
-        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP, Tech.VK]
+        "used": [Tech.HTML5, Tech.JS, Tech.PHP, Tech.VK, Tech.WEBPACK, Tech.SCSS]
     },
 ] as IProject[];
