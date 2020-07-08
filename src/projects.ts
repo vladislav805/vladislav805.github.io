@@ -95,7 +95,7 @@ export default [
         "id": 2,
         "name": "onlineRadio",
         "view": {
-            "href": "https://radio.vlad805.ru/",
+            "href": "https://radio.velu.ga/",
             "label": "Link"
         },
         "status": {
@@ -103,7 +103,7 @@ export default [
             "since": "2013"
         },
         "dateColor": "#303030",
-        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP]
+        "used": [Tech.HTML5, Tech.CSS3, Tech.TS, Tech.WEBPACK, Tech.SCSS]
     },
     {
         "id": 1,
