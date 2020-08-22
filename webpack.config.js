@@ -37,13 +37,8 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: [
-                    {
-                        loader: require.resolve('awesome-typescript-loader'),
-                        options: {
-                            useBabel: true,
-                            silent: isProduction,
-                        },
-                    },
+                    'babel-loader',
+                    'ts-loader',
                 ],
                 exclude: /node_modules/,
 
