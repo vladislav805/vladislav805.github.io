@@ -19,8 +19,7 @@
     "@mdi/react": "1.4.0",
     "classnames": "2.2.6",
     "localized-strings": "0.2.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "preact": "10.4.7",
     "react-process-string": "1.2.0",
     "react-visibility-sensor": "5.1.1"
   },
