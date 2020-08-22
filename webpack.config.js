@@ -37,13 +37,8 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: [
-                    {
-                        loader: require.resolve('awesome-typescript-loader'),
-                        options: {
-                            useBabel: true,
-                            silent: isProduction,
-                        },
-                    },
+                    'babel-loader',
+                    'ts-loader',
                 ],
                 exclude: /node_modules/,
 
@@ -85,6 +80,11 @@ module.exports = {
 
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
+        alias: {
+            'react': 'preact/compat',
+            'react-dom/test-utils': 'preact/test-utils',
+            'react-dom': 'preact/compat',
+        },
     },
 
     optimization: {
@@ -146,7 +146,7 @@ module.exports = {
             ],
         }),
     ],
-    devtool: '#sourcemap',
+    devtool: 'source-map',
     devServer: {
         contentBase: path.resolve('src'),
         host: '0.0.0.0',
