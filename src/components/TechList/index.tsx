@@ -1,11 +1,13 @@
 import * as React from 'react';
+import styles from './TechList.scss';
 import Icon from '@mdi/react';
 import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiLanguageTypescript, mdiSass, mdiReact, mdiWebpack, mdiEslint, mdiLanguagePhp, mdiMicrosoftVisualStudioCode, mdiAndroid, mdiVk, mdiTelegram } from '@mdi/js';
 import { Tech } from '../../types/tech';
-import './TechList.scss';
+import * as classNames from 'classnames';
 
 type ISkillsProps = {
     items: Tech[];
+    isAll?: boolean;
 };
 
 const icons: Record<Tech, string> = {
@@ -40,15 +42,18 @@ const names: Record<Tech, string> = {
     [Tech.TELEGRAM]: 'Telegram Bot API'
 };
 
-const TechList = ({ items }: ISkillsProps) => (
-    <div className="tech">
+const TechList: React.FC<ISkillsProps> = ({ items, isAll = false }: ISkillsProps) => (
+    <div className={classNames(
+        styles['tech'],
+        isAll && styles['tech__all'],
+    )}>
         {items.map((tech, i) => (
-            <div key={i} className="tech-item">
+            <div key={i} className={styles['tech-item']}>
                 <Icon
                     color="#555555"
                     path={icons[tech]}
                     size={2} />
-                <div className="tech-tooltip">{names[tech]}</div>
+                <div className={styles['tech-tooltip']}>{names[tech]}</div>
             </div>
         ))}
     </div>

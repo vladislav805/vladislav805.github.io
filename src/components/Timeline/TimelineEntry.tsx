@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 import VisibilitySensor from 'react-visibility-sensor';
-import './TimelineEntry.scss';
+import styles from './TimelineEntry.scss';
 
 type ITimelineEntryProps = {
     date: string;
@@ -33,37 +33,37 @@ export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelin
         }
     };
 
-    render() {
+    public render(): JSX.Element {
         const { visible } = this.state;
         const { children, date, title, dateColor, logo, link } = this.props;
 
-        const clsVisibility = visible ? 'timeline-entry__show' : 'timeline-entry__hidden';
+        const clsVisibility = visible ? styles['timeline-entry__show'] : styles['timeline-entry__hidden'];
         return (
-            <div className="timeline-entry">
+            <div className={styles['timeline-entry']} data-visible={String(visible)}>
                 <VisibilitySensor
                     partialVisibility={true}
                     offset={{ bottom: 50 }}
                     onChange={this.onVisibilitySensorChange}>
                     <React.Fragment>
-                        <div className={classNames('timeline-entry-date-wrap', clsVisibility)}>
+                        <div className={classNames(styles['timeline-entry-date-wrap'], clsVisibility)}>
                             <time
-                                className="timeline-entry-date"
+                                className={styles['timeline-entry-date']}
                                 style={{background: dateColor}}
                                 title={date}>
                                 {date}
                             </time>
                         </div>
-                        <div className={classNames('timeline-entry-content', clsVisibility)}>
+                        <div className={classNames(styles['timeline-entry-content'], clsVisibility)}>
                             {logo ? (
-                                <div className="timeline-entry-image">
+                                <div className={styles['timeline-entry-image']}>
                                     <img {...logo} alt="" />
                                 </div>
                             ) : (
                                 <h3>{title}</h3>
                             )}
-                            <div className="timeline-entry-body">
+                            <div className={styles['timeline-entry-body']}>
                                 {children}
-                                {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className="timeline-entry-link">{link.label}</a>}
+                                {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles['timeline-entry-link']}>{link.label}</a>}
                             </div>
                         </div>
                     </React.Fragment>

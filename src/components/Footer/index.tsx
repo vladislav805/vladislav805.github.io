@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.scss';
+import styles from './style.scss';
 import { ILocale } from '../../locales';
 
 type IFooterProps = {
@@ -12,14 +12,14 @@ const assoc: Record<string, string> = {
     'ru': 'en',
 };
 
-const Footer = ({ onChangeLocale, locale }: IFooterProps) => {
+const Footer: React.FC<IFooterProps> = ({ onChangeLocale, locale }: IFooterProps) => {
     const onChange = () => onChangeLocale(assoc[locale.getLanguage()]);
 
     return (
-        <div className="footer">
-            <div className="footer-left">Vladislav Veluga &copy; 2010&ndash;{new Date().getFullYear()}</div>
-            <div className="footer-right">
-                <span className="footer-lang" onClick={onChange}>{locale.getLanguage().toUpperCase()}</span>
+        <div className={styles['footer']}>
+            <div className={styles['footer-left']}>Vladislav Veluga &copy; 2010&ndash;{new Date().getFullYear()}</div>
+            <div className={styles['footer-right']}>
+                <span className={styles['footer-lang']} onClick={onChange}>{locale.getLanguage().toUpperCase()}</span>
             </div>
         </div>
     );

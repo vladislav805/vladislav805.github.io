@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.scss';
+import styles from './style.scss';
 import { IProject } from '../../types/project';
 import { Timeline, TimelineEntry } from '../Timeline';
 import TechList from '../TechList';
@@ -10,7 +10,7 @@ type ITimelineProjectsProps = {
     projects: IProject[];
 };
 
-const TimelineProjects = ({ locale: { timeline }, projects }: ITimelineProjectsProps) => {
+const TimelineProjects: React.FC<ITimelineProjectsProps> = ({ locale: { timeline }, projects }: ITimelineProjectsProps) => {
     const { header, monthsShort, now, items } = timeline;
 
     const renderDate = (project: IProject) => {
@@ -28,9 +28,9 @@ const TimelineProjects = ({ locale: { timeline }, projects }: ITimelineProjectsP
     };
 
     return (
-        <div className="timeline-projects">
+        <div className={styles['timeline-projects']}>
             <h2>{header}</h2>
-            <Timeline animate={true}>
+            <Timeline>
                 {projects.map(entry => {
                     const { title, description, view } = items[entry.name];
                     return (

@@ -1,6 +1,6 @@
 {
     "extends": "stylelint-config-standard",
-    "ignoreFiles": ["**/*.js", "**/*.ts", "**/*.tsx"],
+    "ignoreFiles": ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.svg", "**/*.webp", "**/*.jpg"],
     "rules": {
         "indentation": [4, {
             "except": ["value"],
@@ -21,7 +21,7 @@
         }],
         "number-leading-zero": "never",
         "at-rule-no-unknown": [true, {
-            "ignoreAtRules": ["function", "if", "each", "include", "mixin"]
+            "ignoreAtRules": ["function", "if", "each", "include", "mixin", "else"]
         }]
     }
 }

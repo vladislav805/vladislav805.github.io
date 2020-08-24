@@ -2,9 +2,5 @@
     max-width: 800px;
     margin: 10px auto;
     padding: 0 20px;
-    overflow: hidden; // для предотвращения появления горизорнтального скролла от тултипа .tech-item
-
-    .tech {
-        justify-content: center;
-    }
+    overflow: hidden; // для предотвращения появления горизонтального скролла от тултипа .tech-item
 }

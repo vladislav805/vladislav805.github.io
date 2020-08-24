@@ -2,18 +2,7 @@
     display: flex;
     flex-flow: row wrap;
 
-    &-item {
-        position: relative;
-
-        &:hover .tech-tooltip {
-            opacity: 1;
-            transform: translate(-50%, 0) scale(1);
-        }
-
-        margin: 0 2px 2px 0;
-    }
-
-    .tech-tooltip {
+    &-tooltip {
         $animation-duration: .075s;
         $animation-fx: ease-in-out;
 
@@ -35,7 +24,22 @@
         transform: translate(-50%, 100%) scale(.2);
         transform-origin: center;
         transition:
-            transform $animation-duration $animation-fx,
-            opacity $animation-duration $animation-fx;
+                transform $animation-duration $animation-fx,
+                opacity $animation-duration $animation-fx;
+    }
+
+    &-item {
+        position: relative;
+
+        &:hover .tech-tooltip {
+            opacity: 1;
+            transform: translate(-50%, 0) scale(1);
+        }
+
+        margin: 0 2px 2px 0;
+    }
+
+    &__all {
+        justify-content: center;
     }
 }
