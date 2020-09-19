@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -19,9 +19,11 @@ jobs:
           npm ci
           npm run build
 
-      - name: Build and Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.1
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: dist
