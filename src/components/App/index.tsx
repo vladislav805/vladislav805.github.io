@@ -29,12 +29,12 @@ export default class App extends React.Component<IAppProps, IAppState> {
         this.props.locale.setLanguage(this.state.locale);
     }
 
-    private onChangeLocale = (locale: string) => {
+    private onChangeLocale = (locale: string): void => {
         this.props.locale.setLanguage(locale);
         this.setState({ locale });
     };
 
-    render() {
+    render(): JSX.Element {
         const locale = this.props.locale;
         return (
             <>

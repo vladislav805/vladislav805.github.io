@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.scss';
+import styles from './style.scss';
 import photo from '../../images/photo-main.webp';
 import { staticUrl } from '../../utils';
 import { ILocale } from '../../locales';
@@ -8,16 +8,16 @@ type IHeaderProps = {
     locale: ILocale;
 };
 
-const Header = ({ locale: { header: { photoAlt, name, position, location } } }: IHeaderProps) => (
-    <div className="header">
-        <div className="header-content">
-            <div className="header-photo">
+const Header: React.FC<IHeaderProps> = ({ locale: { header: { photoAlt, name, position, location } } }: IHeaderProps) => (
+    <div className={styles['header']}>
+        <div className={styles['header-content']}>
+            <div className={styles['header-photo']}>
                 <img src={staticUrl(photo)} alt={photoAlt} />
             </div>
-            <div className="header-aside">
-                <h1 className="header-name">{name}</h1>
-                <h2 className="header-position">{position}</h2>
-                <h3 className="header-location">{location}</h3>
+            <div className={styles['header-aside']}>
+                <h1 className={styles['header-name']}>{name}</h1>
+                <h2 className={styles['header-position']}>{position}</h2>
+                <h3 className={styles['header-location']}>{location}</h3>
             </div>
         </div>
     </div>

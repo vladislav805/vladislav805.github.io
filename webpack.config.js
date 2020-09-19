@@ -14,7 +14,7 @@ const PATH = (_static => ({
     STATIC_IMAGES: `${_static}/images`
 }))('static');
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = true // process.env.NODE_ENV === 'production';
 
 const mode = isProduction ? 'production' : 'development';
 
@@ -53,6 +53,11 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: isProduction ? 'c[sha256:hash:hex:4]' : '[local]',
+                            },
+                        },
                     },
                     {
                         loader: 'sass-loader',

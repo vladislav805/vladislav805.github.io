@@ -3,6 +3,7 @@
 @mixin block-arrow($direction: right) {
     $path: ();
     $unshift: calc(100% - #{$arrow-shift});
+
     @if ($direction == right) {
         $path: (
             0 0,
@@ -49,7 +50,6 @@ $dot-size: 8px;
      * Левая часть
      */
     &-date {
-
         /**
          * Обёртка
          */
@@ -72,9 +72,8 @@ $dot-size: 8px;
         font-size: 1rem;
         font-weight: bold;
         line-height: $height-date;
-        color: #fff;
+        color: #ffffff;
         white-space: nowrap;
-
 
         @include block-arrow(left);
 
@@ -131,7 +130,7 @@ $dot-size: 8px;
         line-height: 30px;
         padding: 0 16px;
         text-decoration: none;
-        color: #222;
+        color: #222222;
         margin: 6px 0;
         transition: background .1s ease-in-out;
 
@@ -144,13 +143,14 @@ $dot-size: 8px;
      * Точка
      */
     &::after {
+        @include size($dot-size);
+
         content: "";
         display: block;
 
         position: absolute;
         left: $line-dot-left;
         top: #{$height-date / 2 - $dot-size};
-        @include size($dot-size);
         border: 4px solid;
         border-radius: 50%;
 
@@ -188,11 +188,11 @@ $dot-size: 8px;
     /**
      * Анимации
      */
-    .timeline__withAnimation &__hidden {
+    &__hidden {
         visibility: hidden;
     }
 
-    .timeline__withAnimation &__show {
+    &__show {
         visibility: visible;
         animation: timeline-show-right .4s;
     }
@@ -209,7 +209,7 @@ $dot-size: 8px;
     }
 
     @media screen and (min-width: $breakpoint-pad) {
-        .timeline__withAnimation &__show#{'.timeline-entry-date-wrap'} {
+        &__show#{'.timeline-entry-date-wrap'} {
             animation: timeline-show-left .4s;
         }
     }
