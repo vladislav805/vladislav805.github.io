@@ -13,9 +13,6 @@ jobs:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
       # Setup key
       - run: set -eu
       - run: mkdir "$HOME/.ssh"
@@ -25,4 +22,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . vlad805@212.47.233.241:/home/vlad805/projects/veluga/dist/
+      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . vlad805@135.181.147.70:/home/vlad805/projects/veluga/
