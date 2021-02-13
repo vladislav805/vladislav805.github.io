@@ -30,7 +30,7 @@ export default [
             "since": "2015/06"
         },
         "dateColor": "#009688",
-        "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Rech.REACT, Tech.WEBPACK, Tech.ESLINT, Tech.TELEGRAM]
+        "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK, Tech.ESLINT, Tech.TELEGRAM]
     },
     {
         "id": 6,
