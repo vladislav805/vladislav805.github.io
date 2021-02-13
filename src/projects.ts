@@ -22,7 +22,7 @@ export default [
         "id": 7,
         "name": "sights",
         "view": {
-            "href": "https://sights.vlad805.ru/",
+            "href": "https://sights.velu.ga/",
             "label": "Link"
         },
         "status": {
@@ -30,7 +30,7 @@ export default [
             "since": "2015/06"
         },
         "dateColor": "#009688",
-        "used": [Tech.HTML5, Tech.CSS3, Tech.JS, Tech.PHP, Tech.TELEGRAM]
+        "used": [Tech.HTML5, Tech.SCSS, Tech.TS, Rech.REACT, Tech.WEBPACK, Tech.ESLINT, Tech.TELEGRAM]
     },
     {
         "id": 6,
@@ -122,6 +122,6 @@ export default [
             "height": 62
         },
         "dateColor": "#567ca4",
-        "used": [Tech.HTML5, Tech.JS, Tech.PHP, Tech.VK, Tech.WEBPACK, Tech.SCSS]
+        "used": [Tech.HTML5, Tech.TS, Tech.PHP, Tech.VK, Tech.WEBPACK, Tech.ESLINT, Tech.SCSS]
     },
 ] as IProject[];
