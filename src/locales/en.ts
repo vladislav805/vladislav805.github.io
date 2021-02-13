@@ -9,7 +9,7 @@ export default {
     },
     "about": {
         "header": "Who am I?",
-        "whereIAm": "I am a web developer from Saint-Petersburg. First-year student of SPb SUAI magistracy.",
+        "whereIAm": "I am a web developer from Saint-Petersburg. Second-year student of SPb SUAI magistracy.",
         "webDevShort": "I have been developing on JavaScript/PHP since 2012. Since 2019 I have been actively using TypeScript.",
         "androidDevShort": "In addition to web development, I'm interested in and learning to write on Java for Android.",
         "skills": "Skills and tools"
@@ -35,7 +35,7 @@ export default {
                 "description": [
                     "A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, Krasnodar, Veliky Novgorod and not only",
                     "",
-                    "The code is currently being rewritten using newer technologies."
+                    "In 2021, the project was completely rewritten in TypeScript."
                 ],
                 "view": "Link"
             },
@@ -81,7 +81,7 @@ export default {
                 "description": [
                     "APIdog — web client for VK.com",
                     "An alternative multifunctional web client for the VK social network, using API and written almost entirely in Vanilla JavaScript.",
-                    "Site developed discontinued around 2017. In 2020, it was almost completely rewritten to ES6 using webpack + babel and SCSS."
+                    "Site developed discontinued around 2017. In 2020, it was almost completely rewritten to ES6 using webpack + babel and SCSS, after a couple of months - to TypeScript."
                 ],
                 "view": "Link"
             }
