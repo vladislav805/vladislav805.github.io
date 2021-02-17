@@ -4,4 +4,11 @@ import './general.scss';
 import App from './components/App';
 import locales from './locales';
 
-ReactDOM.render(<App locale={locales} />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const app = <App locale={locales} />;
+
+if (rootElement.hasChildNodes()) {
+    ReactDOM.hydrate(app, rootElement);
+} else {
+    ReactDOM.render(app, rootElement);
+}

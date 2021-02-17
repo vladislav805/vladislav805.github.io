@@ -7,14 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const PATH = (_static => ({
     SRC: path.resolve('src'),
-    DIST: path.resolve('dist'),
+    DIST: path.resolve('build'),
     ROOT: path.resolve('.'),
     STATIC: _static,
     STATIC_CSS: `${_static}/css`,
     STATIC_IMAGES: `${_static}/images`
 }))('static');
 
-const isProduction = true // process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 
 const mode = isProduction ? 'production' : 'development';
 
