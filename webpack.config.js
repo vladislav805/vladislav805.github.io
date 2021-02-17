@@ -7,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const PATH = (_static => ({
     SRC: path.resolve('src'),
-    DIST: path.resolve('build'),
+    BUILD: path.resolve('build'),
     ROOT: path.resolve('.'),
     STATIC: _static,
     STATIC_CSS: `${_static}/css`,
@@ -28,7 +28,7 @@ module.exports = {
     },
 
     output: {
-        path: PATH.DIST,
+        path: PATH.BUILD,
         filename: `${PATH.STATIC}/js/[name].js`,
     },
 
@@ -146,7 +146,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve('src', 'images'),
-                    to: path.resolve('dist', 'static', 'images'),
+                    to: path.resolve('build', 'static', 'images'),
                 },
             ],
         }),
