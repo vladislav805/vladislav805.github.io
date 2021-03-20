@@ -1,9 +1,24 @@
+/* eslint-disable react/no-array-index-key */
 import * as React from 'react';
-import styles from './TechList.scss';
 import Icon from '@mdi/react';
-import { mdiLanguageHtml5, mdiLanguageCss3, mdiLanguageJavascript, mdiLanguageTypescript, mdiSass, mdiReact, mdiWebpack, mdiEslint, mdiLanguagePhp, mdiMicrosoftVisualStudioCode, mdiAndroid, mdiVk, mdiTelegram } from '@mdi/js';
-import { Tech } from '../../types/tech';
+import {
+    mdiLanguageHtml5,
+    mdiLanguageCss3,
+    mdiLanguageJavascript,
+    mdiLanguageTypescript,
+    mdiSass,
+    mdiReact,
+    mdiWebpack,
+    mdiEslint,
+    mdiLanguagePhp,
+    mdiMicrosoftVisualStudioCode,
+    mdiAndroid,
+    mdiVk,
+    mdiTelegram,
+} from '@mdi/js';
 import * as classNames from 'classnames';
+import { Tech } from '../../types/tech';
+import styles from './TechList.scss';
 
 type ISkillsProps = {
     items: Tech[];
@@ -23,7 +38,7 @@ const icons: Record<Tech, string> = {
     [Tech.VSC]: mdiMicrosoftVisualStudioCode,
     [Tech.ANDROID]: mdiAndroid,
     [Tech.VK]: mdiVk,
-    [Tech.TELEGRAM]: mdiTelegram
+    [Tech.TELEGRAM]: mdiTelegram,
 };
 
 const names: Record<Tech, string> = {
@@ -39,13 +54,13 @@ const names: Record<Tech, string> = {
     [Tech.VSC]: 'Visual Studio Code',
     [Tech.ANDROID]: 'Android',
     [Tech.VK]: 'VK API',
-    [Tech.TELEGRAM]: 'Telegram Bot API'
+    [Tech.TELEGRAM]: 'Telegram Bot API',
 };
 
 const TechList: React.FC<ISkillsProps> = ({ items, isAll = false }: ISkillsProps) => (
     <div className={classNames(
-        styles['tech'],
-        isAll && styles['tech__all'],
+        styles.tech,
+        isAll && styles.tech__all,
     )}>
         {items.map((tech, i) => (
             <div key={i} className={styles['tech-item']}>

@@ -23,9 +23,13 @@ type ITimelineEntryState = {
 };
 
 export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelineEntryState> {
-    state = {
-        visible: false,
-    };
+    public constructor(props: ITimelineEntryProps) {
+        super(props);
+
+        this.state = {
+            visible: false,
+        };
+    }
 
     private onVisibilitySensorChange = (isVisible: boolean) => {
         if (isVisible) {
@@ -41,14 +45,14 @@ export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelin
         return (
             <div className={styles['timeline-entry']} data-visible={String(visible)}>
                 <VisibilitySensor
-                    partialVisibility={true}
+                    partialVisibility
                     offset={{ bottom: 50 }}
                     onChange={this.onVisibilitySensorChange}>
-                    <React.Fragment>
+                    <>
                         <div className={classNames(styles['timeline-entry-date-wrap'], clsVisibility)}>
                             <time
                                 className={styles['timeline-entry-date']}
-                                style={{background: dateColor}}
+                                style={{ background: dateColor }}
                                 title={date}>
                                 {date}
                             </time>
@@ -63,10 +67,18 @@ export class TimelineEntry extends React.Component<ITimelineEntryProps, ITimelin
                             )}
                             <div className={styles['timeline-entry-body']}>
                                 {children}
-                                {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles['timeline-entry-link']}>{link.label}</a>}
+                                {link && (
+                                    <a
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles['timeline-entry-link']}>
+                                        {link.label}
+                                    </a>
+                                )}
                             </div>
                         </div>
-                    </React.Fragment>
+                    </>
                 </VisibilitySensor>
             </div>
         );

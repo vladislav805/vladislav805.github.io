@@ -3,8 +3,8 @@ import { Tech } from './tech';
 export interface IProject {
     id: number;
     name: string;
-    //title: string;
-    //description: string[];
+    // title: string;
+    // description: string[];
     view: IProjectViewLink;
     status: IProjectStatus;
     logo: IProjectLogo;

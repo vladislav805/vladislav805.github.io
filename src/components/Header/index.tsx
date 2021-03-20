@@ -9,7 +9,7 @@ type IHeaderProps = {
 };
 
 const Header: React.FC<IHeaderProps> = ({ locale: { header: { photoAlt, name, position, location } } }: IHeaderProps) => (
-    <div className={styles['header']}>
+    <div className={styles.header}>
         <div className={styles['header-content']}>
             <div className={styles['header-photo']}>
                 <img src={staticUrl(photo)} alt={photoAlt} />

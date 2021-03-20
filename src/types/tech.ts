@@ -12,5 +12,5 @@ export const enum Tech {
     ANDROID,
 
     VK,
-    TELEGRAM
+    TELEGRAM,
 }

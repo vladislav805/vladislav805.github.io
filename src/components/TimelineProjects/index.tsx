@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import * as React from 'react';
 import styles from './style.scss';
 import { IProject } from '../../types/project';
@@ -49,6 +50,6 @@ const TimelineProjects: React.FC<ITimelineProjectsProps> = ({ locale: { timeline
             </Timeline>
         </div>
     );
-}
+};
 
 export default TimelineProjects;

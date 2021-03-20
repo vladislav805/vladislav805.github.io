@@ -9,7 +9,7 @@ type IAboutProps = {
 };
 
 const About: React.FC<IAboutProps> = ({ locale: { about: { header, whereIAm, webDevShort, androidDevShort, skills } } }: IAboutProps) => (
-    <div className={styles['about']}>
+    <div className={styles.about}>
         <h2>{header}</h2>
         <p>{whereIAm}</p>
         <p>{webDevShort}</p>
@@ -17,8 +17,22 @@ const About: React.FC<IAboutProps> = ({ locale: { about: { header, whereIAm, web
         <p>{androidDevShort}</p>
         <h2>{skills}</h2>
         <TechList
-            isAll={true}
-            items={[Tech.HTML5, Tech.CSS3, Tech.SCSS, Tech.JS, Tech.TS, Tech.REACT, Tech.ESLINT, Tech.WEBPACK, Tech.PHP, Tech.VSC, Tech.ANDROID, Tech.VK, Tech.TELEGRAM]} />
+            isAll
+            items={[
+                Tech.HTML5,
+                Tech.CSS3,
+                Tech.SCSS,
+                Tech.JS,
+                Tech.TS,
+                Tech.REACT,
+                Tech.ESLINT,
+                Tech.WEBPACK,
+                Tech.PHP,
+                Tech.VSC,
+                Tech.ANDROID,
+                Tech.VK,
+                Tech.TELEGRAM,
+            ]} />
     </div>
 );
 
