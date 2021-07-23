@@ -3,8 +3,23 @@ import { Tech } from './types/tech';
 
 export default [
     {
+        id: 9,
+        name: 'yandex_2021',
+        status: {
+            active: true,
+            since: '2021/07/21',
+        },
+        logo: {
+            src: 'static/images/yandex.svg',
+            width: 129,
+            height: 50,
+        },
+        dateColor: '#ee252c',
+        used: [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK, Tech.ESLINT],
+    },
+    {
         id: 8,
-        name: 'yandex',
+        name: 'yandex_2019',
         status: {
             active: false,
             since: '2019/08/07',
@@ -113,7 +128,7 @@ export default [
             label: 'Link',
         },
         status: {
-            active: false,
+            active: true,
             since: '2012/08/07',
         },
         logo: {

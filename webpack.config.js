@@ -153,7 +153,7 @@ module.exports = {
     ],
     devtool: 'source-map',
     devServer: {
-        contentBase: path.resolve('src'),
+        static: path.resolve('src'),
         host: '0.0.0.0',
         port: 8080,
     },

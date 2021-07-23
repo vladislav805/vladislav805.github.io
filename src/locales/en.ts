@@ -23,7 +23,13 @@ export default {
         now: 'now',
 
         items: {
-            yandex: {
+            yandex_2021: {
+                title: 'Yandex',
+                description: [
+                    'Frontend trainee-developer at Yandex',
+                ],
+            },
+            yandex_2019: {
                 title: 'Yandex',
                 description: [
                     'Frontend trainee-developer at Yandex',

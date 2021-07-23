@@ -16,7 +16,7 @@ import {
     mdiVk,
     mdiTelegram,
 } from '@mdi/js';
-import * as classNames from 'classnames';
+import classNames from 'classnames';
 import { Tech } from '../../types/tech';
 import styles from './TechList.scss';
 
