@@ -74,8 +74,8 @@ module.exports = {
                         options: {
                             name: '[name].[ext]',
                             useRelativePath: true,
-                            publicPath: url => path.join(path.relative(PATH.STATIC_CSS, PATH.STATIC_IMAGES), url),
-                            outputPath: PATH.STATIC_IMAGES,
+                            publicPath: url => `static/images/${url}`,
+                            outputPath: 'static/images/',
                         },
                     },
                 ],
@@ -142,14 +142,14 @@ module.exports = {
                 ],
             }),
         }),
-        new CopyPlugin({
+        /*new CopyPlugin({
             patterns: [
                 {
                     from: path.resolve('src', 'images'),
                     to: path.resolve('build', 'static', 'images'),
                 },
             ],
-        }),
+        }),*/
     ],
     devtool: 'source-map',
     devServer: {

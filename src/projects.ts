@@ -1,5 +1,7 @@
 import { IProject } from './types/project';
 import { Tech } from './types/tech';
+import imageYaLogo from './images/yandex.svg';
+import imageAPIdogLogo from './images/apidog.svg';
 
 export default [
     {
@@ -10,7 +12,7 @@ export default [
             since: '2021/07/21',
         },
         logo: {
-            src: 'static/images/yandex.svg',
+            src: imageYaLogo,
             width: 129,
             height: 50,
         },
@@ -26,7 +28,7 @@ export default [
             until: '2019/11/27',
         },
         logo: {
-            src: 'static/images/yandex.svg',
+            src: imageYaLogo,
             width: 129,
             height: 50,
         },
@@ -132,7 +134,7 @@ export default [
             since: '2012/08/07',
         },
         logo: {
-            src: 'static/images/apidog.svg',
+            src: imageAPIdogLogo,
             width: 248,
             height: 62,
         },
