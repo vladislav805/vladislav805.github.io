@@ -1,4 +1,4 @@
-import { ILocale } from './types';
+import type { ILocale } from './types';
 
 export default {
     header: {
@@ -9,7 +9,7 @@ export default {
     },
     about: {
         header: 'Who am I?',
-        whereIAm: 'I am a web developer from Saint-Petersburg. Second-year student of SPb SUAI magistracy.',
+        whereIAm: 'I am a web developer from Saint-Petersburg. Graduate of SPb SUAI.',
         webDevShort: 'I have been developing on JavaScript/PHP since 2012. Since 2019 I have been actively using TypeScript.',
         androidDevShort: "In addition to web development, I'm interested in and learning to write on Java for Android.",
         skills: 'Skills and tools',
@@ -26,7 +26,7 @@ export default {
             yandex_2021: {
                 title: 'Yandex',
                 description: [
-                    'Frontend trainee-developer at Yandex',
+                    'Frontend developer at Yandex',
                 ],
             },
             yandex_2019: {
