@@ -1,5 +1,5 @@
 import LocalizedStrings from 'localized-strings';
-import { ILocale } from './types';
+import type { ILocale } from './types';
 import en from './en';
 import ru from './ru';
 

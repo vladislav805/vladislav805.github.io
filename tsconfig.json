@@ -5,11 +5,13 @@
         "moduleResolution": "node",
         "target": "esnext",
         "sourceMap": true,
+        "esModuleInterop": true,
         "lib": ["dom", "es6"],
         "resolveJsonModule": true,
         "noImplicitReturns": false,
         "noImplicitAny": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "importsNotUsedAsValues": "error"
     },
     "include": [
         "src/**/*"

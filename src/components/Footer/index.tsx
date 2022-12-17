@@ -1,6 +1,8 @@
 import * as React from 'react';
-import styles from './style.scss';
-import { ILocale } from '../../locales';
+
+import type { ILocale } from '../../locales';
+
+import styles from './Footer.scss';
 
 type IFooterProps = {
     onChangeLocale: (newLang: string) => void;
@@ -12,7 +14,7 @@ const assoc: Record<string, string> = {
     ru: 'en',
 };
 
-const Footer: React.FC<IFooterProps> = ({ onChangeLocale, locale }: IFooterProps) => {
+export const Footer: React.FC<IFooterProps> = ({ onChangeLocale, locale }) => {
     const onChange = () => onChangeLocale(assoc[locale.getLanguage()]);
 
     return (
@@ -24,5 +26,3 @@ const Footer: React.FC<IFooterProps> = ({ onChangeLocale, locale }: IFooterProps
         </div>
     );
 };
-
-export default Footer;

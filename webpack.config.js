@@ -3,33 +3,25 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-
-const PATH = (_static => ({
-    SRC: path.resolve('src'),
-    BUILD: path.resolve('build'),
-    ROOT: path.resolve('.'),
-    STATIC: _static,
-    STATIC_CSS: `${_static}/css`,
-    STATIC_IMAGES: `${_static}/images`
-}))('static');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 const mode = isProduction ? 'production' : 'development';
 
+/** @type {import('webpack').Configuration} */
 module.exports = {
     mode,
     target: 'web',
-    context: PATH.SRC,
+    context: path.resolve('src'),
 
     entry: {
-        main: path.resolve(PATH.SRC, 'index.tsx'),
+        main: path.resolve('src', 'index.tsx'),
     },
 
     output: {
-        path: PATH.BUILD,
-        filename: `${PATH.STATIC}/js/[name].js`,
+        path: path.resolve('build'),
+        filename: 'static/js/[name].js',
+        assetModuleFilename: 'static/asset/[name]-[contenthash][ext]',
     },
 
     module: {
@@ -67,29 +59,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
-                exclude: /(node_modules)/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            useRelativePath: true,
-                            publicPath: url => `static/images/${url}`,
-                            outputPath: 'static/images/',
-                        },
-                    },
-                ],
+                exclude: /node_modules/,
+                type: 'asset/resource',
             },
         ],
     },
 
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
-        alias: {
-            'react': 'preact/compat',
-            'react-dom/test-utils': 'preact/test-utils',
-            'react-dom': 'preact/compat',
-        },
     },
 
     optimization: {
@@ -99,21 +76,9 @@ module.exports = {
         ],
     },
 
-    /*...(isProduction ? {
-        externals: {
-            'react': 'React',
-            'react-dom' : 'ReactDOM',
-        },
-    } : {}),*/
-
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATH.STATIC_CSS}/[name].css`,
-            chunkFilename: `${PATH.STATIC_CSS}/[id].css`,
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug: false,
+            filename: `static/css/[id].css`,
         }),
         new webpack.EnvironmentPlugin({
             VERSION: process.env.npm_package_version,
@@ -142,14 +107,6 @@ module.exports = {
                 ],
             }),
         }),
-        /*new CopyPlugin({
-            patterns: [
-                {
-                    from: path.resolve('src', 'images'),
-                    to: path.resolve('build', 'static', 'images'),
-                },
-            ],
-        }),*/
     ],
     devtool: 'source-map',
     devServer: {

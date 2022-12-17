@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { IProject } from '../../types/project';
-import Header from '../Header';
-import Contacts from '../Contacts';
-import About from '../About';
-import TimelineProjects from '../TimelineProjects';
-import Footer from '../Footer';
+import type { IProject } from '../../types/project';
+import { Header } from '../Header';
+import { Contacts } from '../Contacts';
+import { About } from '../About';
+import { TimelineProjects } from '../TimelineProjects';
+import { Footer } from '../Footer';
 import { fromHash, fromNavigator, ILocale } from '../../locales';
 import projects from '../../projects';
 

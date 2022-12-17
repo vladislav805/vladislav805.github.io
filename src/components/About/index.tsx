@@ -1,14 +1,16 @@
 import * as React from 'react';
-import styles from './style.scss';
-import TechList from '../TechList';
+
+import { TechList } from '../TechList';
 import { Tech } from '../../types/tech';
-import { ILocale } from '../../locales';
+import type { ILocale } from '../../locales';
+
+import styles from './About.scss';
 
 type IAboutProps = {
     locale: ILocale;
 };
 
-const About: React.FC<IAboutProps> = ({ locale: { about: { header, whereIAm, webDevShort, androidDevShort, skills } } }: IAboutProps) => (
+export const About: React.FC<IAboutProps> = ({ locale: { about: { header, whereIAm, webDevShort, androidDevShort, skills } } }) => (
     <div className={styles.about}>
         <h2>{header}</h2>
         <p>{whereIAm}</p>
@@ -35,5 +37,3 @@ const About: React.FC<IAboutProps> = ({ locale: { about: { header, whereIAm, web
             ]} />
     </div>
 );
-
-export default About;

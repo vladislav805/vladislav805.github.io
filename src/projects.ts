@@ -1,4 +1,4 @@
-import { IProject } from './types/project';
+import type { IProject } from './types/project';
 import { Tech } from './types/tech';
 import imageYaLogo from './images/yandex.svg';
 import imageAPIdogLogo from './images/apidog.svg';

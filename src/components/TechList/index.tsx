@@ -13,9 +13,8 @@ import {
     mdiLanguagePhp,
     mdiMicrosoftVisualStudioCode,
     mdiAndroid,
-    mdiVk,
-    mdiTelegram,
 } from '@mdi/js';
+import { siVk, siTelegram } from 'simple-icons/icons';
 import classNames from 'classnames';
 import { Tech } from '../../types/tech';
 import styles from './TechList.scss';
@@ -37,8 +36,8 @@ const icons: Record<Tech, string> = {
     [Tech.PHP]: mdiLanguagePhp,
     [Tech.VSC]: mdiMicrosoftVisualStudioCode,
     [Tech.ANDROID]: mdiAndroid,
-    [Tech.VK]: mdiVk,
-    [Tech.TELEGRAM]: mdiTelegram,
+    [Tech.VK]: siVk.path,
+    [Tech.TELEGRAM]: siTelegram.path,
 };
 
 const names: Record<Tech, string> = {
@@ -57,7 +56,9 @@ const names: Record<Tech, string> = {
     [Tech.TELEGRAM]: 'Telegram Bot API',
 };
 
-const TechList: React.FC<ISkillsProps> = ({ items, isAll = false }: ISkillsProps) => (
+const needPadding = (tech: Tech) => tech === Tech.VK || tech === Tech.TELEGRAM;
+
+export const TechList: React.FC<ISkillsProps> = ({ items, isAll = false }) => (
     <div className={classNames(
         styles.tech,
         isAll && styles.tech__all,
@@ -65,13 +66,16 @@ const TechList: React.FC<ISkillsProps> = ({ items, isAll = false }: ISkillsProps
         {items.map((tech, i) => (
             <div key={i} className={styles['tech-item']}>
                 <Icon
+                    className={classNames(
+                        'tech-icon',
+                        needPadding(tech) && styles['tech-icon__small'],
+                    )}
                     color="#555555"
                     path={icons[tech]}
-                    size={2} />
+                    size={2}
+                />
                 <div className={styles['tech-tooltip']}>{names[tech]}</div>
             </div>
         ))}
     </div>
 );
-
-export default TechList;

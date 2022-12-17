@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import VisibilitySensor from 'react-visibility-sensor';
 import styles from './TimelineEntry.scss';
 
-type ITimelineEntryProps = {
+interface ITimelineEntryProps extends React.PropsWithChildren {
     date: string;
     title: string;
     logo?: {
@@ -16,7 +16,7 @@ type ITimelineEntryProps = {
         label: string;
     };
     dateColor?: string;
-};
+}
 
 type ITimelineEntryState = {
     visible: boolean;

@@ -1,5 +1,4 @@
 @import '../../common.scss';
-@import '../../images.scss';
 
 .header,
 .header-content {
@@ -18,7 +17,7 @@
     min-height: 420px;
 
     background: {
-        image: url($image-header-background);
+        image: url('../../images/main-bg.webp');
         repeat: no-repeat;
         position: center -10px;
         attachment: fixed;

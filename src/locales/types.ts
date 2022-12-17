@@ -1,4 +1,4 @@
-import { LocalizedStringsMethods } from 'localized-strings';
+import type { LocalizedStringsMethods } from 'localized-strings';
 
 export interface ILocaleTimelineEntry {
     title: string;

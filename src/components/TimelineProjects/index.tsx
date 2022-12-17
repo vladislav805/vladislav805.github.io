@@ -1,17 +1,18 @@
 /* eslint-disable react/no-array-index-key */
 import * as React from 'react';
-import styles from './style.scss';
-import { IProject } from '../../types/project';
+import type { IProject } from '../../types/project';
 import { Timeline, TimelineEntry } from '../Timeline';
-import TechList from '../TechList';
-import { ILocale } from '../../locales';
+import { TechList } from '../TechList';
+import type { ILocale } from '../../locales';
+
+import styles from './TimelineProjects.scss';
 
 type ITimelineProjectsProps = {
     locale: ILocale;
     projects: IProject[];
 };
 
-const TimelineProjects: React.FC<ITimelineProjectsProps> = ({ locale: { timeline }, projects }: ITimelineProjectsProps) => {
+export const TimelineProjects: React.FC<ITimelineProjectsProps> = ({ locale: { timeline }, projects }) => {
     const { header, monthsShort, now, items } = timeline;
 
     const renderDate = (project: IProject) => {
@@ -51,5 +52,3 @@ const TimelineProjects: React.FC<ITimelineProjectsProps> = ({ locale: { timeline
         </div>
     );
 };
-
-export default TimelineProjects;

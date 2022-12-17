@@ -30,13 +30,19 @@
 
     &-item {
         position: relative;
+        margin: 0 4px 4px 0;
+        line-height: 0;
 
         &:hover .tech-tooltip {
             opacity: 1;
             transform: translate(-50%, 0) scale(1);
         }
+    }
 
-        margin: 0 2px 2px 0;
+    &-icon {
+        &__small {
+            transform: scale(.8);
+        }
     }
 
     &__all {
