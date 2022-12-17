@@ -20,8 +20,8 @@ module.exports = {
 
     output: {
         path: path.resolve('build'),
-        filename: 'static/js/[name].js',
-        assetModuleFilename: 'static/asset/[name]-[contenthash][ext]',
+        filename: 'static/js/[name]-[contenthash:8].js',
+        assetModuleFilename: 'static/asset/[name]-[contenthash:8][ext]',
     },
 
     module: {
@@ -78,7 +78,7 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `static/css/[id].css`,
+            filename: `static/css/[name]-[contenthash:8].css`,
         }),
         new webpack.EnvironmentPlugin({
             VERSION: process.env.npm_package_version,
