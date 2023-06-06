@@ -1,4 +1,4 @@
-name: Deploy to velu.ga
+name: Deploy to veluga.dev
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [18.x]
     steps:
       - uses: actions/checkout@v2
       # Setup key

@@ -28,7 +28,7 @@ export const Contacts: React.FC<IContactsProps> = ({ locale }) => (
         <h2>{locale.contacts.header}</h2>
         <div className={styles['contact-list']}>
             <ContactItem icon={siTelegram.path} label="@vladislav805" link="tg://resolve?domain=vladislav805" />
-            <ContactItem icon={mdiEmailOutline} label="vlad@velu.ga" link="mailto:vlad@velu.ga" />
+            <ContactItem icon={mdiEmailOutline} label="vladislav805@yandex.com" link="mailto:vladislav805@yandex.com" />
             <ContactItem icon={mdiGithub} label="vladislav805" link="https://github.com/vladislav805" />
         </div>
     </div>

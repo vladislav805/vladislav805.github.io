@@ -101,7 +101,7 @@ module.exports = {
                     { property: 'og:description', content: 'Web-developer from Saint-Petersburg' },
                     { property: 'og:image', content: 'static/images/photo-main.jpg' },
                     { property: 'og:type', content: 'website' },
-                    { property: 'og:url', content: 'https://velu.ga/' },
+                    { property: 'og:url', content: 'https://veluga.dev/' },
                     { property: 'og:locale', content: 'en_US' },
                     { property: 'og:locale:alternate', content: 'ru_RU' },
                 ],

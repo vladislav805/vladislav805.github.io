@@ -39,7 +39,7 @@ export default [
         id: 7,
         name: 'sights',
         view: {
-            href: 'https://sights.velu.ga/',
+            href: 'https://sights.veluga.dev/',
             label: 'Link',
         },
         status: {
@@ -53,7 +53,7 @@ export default [
         id: 6,
         name: 'rfm',
         view: {
-            href: 'http://rfm.velu.ga/',
+            href: 'https://rfm.veluga.dev/',
             label: 'Link',
         },
         status: {
@@ -112,7 +112,7 @@ export default [
         id: 2,
         name: 'onlineRadio',
         view: {
-            href: 'https://radio.velu.ga/',
+            href: 'https://radio.veluga.dev/',
             label: 'Link',
         },
         status: {
