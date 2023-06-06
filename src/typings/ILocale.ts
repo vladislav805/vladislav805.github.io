@@ -1,11 +1,5 @@
 import type { LocalizedStringsMethods } from 'localized-strings';
 
-export interface ILocaleTimelineEntry {
-    title: string;
-    description: string[];
-    view?: string;
-}
-
 export interface ILocale extends LocalizedStringsMethods {
     header: {
         photoAlt: string;
@@ -29,7 +23,11 @@ export interface ILocale extends LocalizedStringsMethods {
         now: string;
 
         items: {
-            [key: string]: ILocaleTimelineEntry;
+            [key: string]: {
+                title: string;
+                description: string[];
+                view?: string;
+            };
         };
     };
 }

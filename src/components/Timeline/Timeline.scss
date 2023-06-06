@@ -1,10 +1,10 @@
 @import '../../common.scss';
 
-.timeline--wrapper {
+.Timeline {
     width: auto;
-}
 
-.timeline {
-    display: flex;
-    flex-flow: column nowrap;
+    &-Inner {
+        display: flex;
+        flex-flow: column nowrap;
+    }
 }

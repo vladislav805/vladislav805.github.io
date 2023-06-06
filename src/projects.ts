@@ -1,5 +1,6 @@
-import type { IProject } from './types/project';
-import { Tech } from './types/tech';
+import type { IProject } from '@typings';
+import { Tech } from '@typings';
+
 import imageYaLogo from './images/yandex.svg';
 import imageAPIdogLogo from './images/apidog.svg';
 

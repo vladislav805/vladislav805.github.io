@@ -1,8 +1,8 @@
-.tech {
+.TechList {
     display: flex;
     flex-flow: row wrap;
 
-    &-tooltip {
+    &-Tooltip {
         $animation-duration: .075s;
         $animation-fx: ease-in-out;
 
@@ -28,24 +28,24 @@
                 opacity $animation-duration $animation-fx;
     }
 
-    &-item {
+    &-Item {
         position: relative;
         margin: 0 4px 4px 0;
         line-height: 0;
-
-        &:hover .tech-tooltip {
-            opacity: 1;
-            transform: translate(-50%, 0) scale(1);
-        }
     }
 
-    &-icon {
-        &__small {
+    &-Item:hover &-Tooltip {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+
+    &-Icon {
+        &_small {
             transform: scale(.8);
         }
     }
 
-    &__all {
+    &_all {
         justify-content: center;
     }
 }

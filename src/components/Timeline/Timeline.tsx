@@ -1,15 +1,27 @@
-import * as React from 'react';
-import classNames from 'classnames';
-import styles from './Timeline.scss';
+import React from 'react';
 
-type ITimelineProps = React.PropsWithChildren<{
-    primaryColor?: string;
-}>;
+import { TimelineEntry } from './-Entry';
+import type { ITimelineProps } from './Timeline.typings';
+import { timelineCn, timelineInnerCn } from './Timeline.const';
 
-export const Timeline: React.FC<ITimelineProps> = ({ primaryColor, children }: ITimelineProps) => (
-    <div className={classNames(styles['timeline--wrapper'])}>
-        <div className={styles.timeline} style={{ color: primaryColor }}>
-            {children}
+import './Timeline.scss';
+
+export const Timeline: React.FC<ITimelineProps> = ({ primaryColor, projects, locale }) => (
+    <div className={timelineCn}>
+        <div className={timelineInnerCn} style={{ color: primaryColor }}>
+            {projects.map(project => {
+                const { title, description, view } = locale.items[project.name];
+                return (
+                    <TimelineEntry
+                        key={project.id}
+                        project={project}
+                        locale={locale}
+                        link={view ? { href: project.view.href, label: view } : undefined}
+                        title={title}
+                        description={description}
+                    />
+                );
+            })}
         </div>
     </div>
 );

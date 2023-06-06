@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -45,11 +46,6 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
-                        options: {
-                            modules: {
-                                localIdentName: isProduction ? 'c[sha256:hash:hex:4]' : '[local]',
-                            },
-                        },
                     },
                     {
                         loader: 'sass-loader',
@@ -66,7 +62,11 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: ['.tsx', '.ts', '.js'],
+
+        plugins: [
+            new TsconfigPathsPlugin(),
+        ],
     },
 
     optimization: {

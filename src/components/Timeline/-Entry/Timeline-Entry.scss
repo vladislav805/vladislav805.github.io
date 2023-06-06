@@ -1,5 +1,5 @@
 @use 'sass:math';
-@import '../../common.scss';
+@import '../../../common.scss';
 
 @mixin block-arrow($direction: right) {
     $path: ();
@@ -35,7 +35,7 @@ $line-margin: 20px;
 $line-dot-left: #{$width-date + $line-margin};
 $dot-size: 8px;
 
-.timeline-entry {
+.Timeline-Entry {
     display: flex;
     flex-flow: column nowrap;
     position: relative;
@@ -50,42 +50,39 @@ $dot-size: 8px;
     /**
      * Левая часть
      */
-    &-date {
-        /**
-         * Обёртка
-         */
-        &-wrap {
-            // flex-grow: 1;
-            max-width: 90%;
-
-            @media screen and (min-width: $breakpoint-pad) {
-                width: $width-date;
-            }
-        }
-
-        display: inline-block;
-        height: $height-date;
-
-        padding: 0 #{$arrow-shift + 2px};
-
-        background: #e86971;
-
-        font-size: 1rem;
-        font-weight: bold;
-        line-height: $height-date;
-        color: #ffffff;
-        white-space: nowrap;
-
-        @include block-arrow(left);
+    &Date {
+        // flex-grow: 1;
+        max-width: 90%;
 
         @media screen and (min-width: $breakpoint-pad) {
-            width: 100%;
+            width: $width-date;
+        }
 
-            @include block-arrow(right);
+        &Time {
+            display: inline-block;
+            height: $height-date;
+
+            padding: 0 #{$arrow-shift + 2px};
+
+            background: #e86971;
+
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: $height-date;
+            color: #ffffff;
+            white-space: nowrap;
+
+            @include block-arrow(left);
+
+            @media screen and (min-width: $breakpoint-pad) {
+                width: 100%;
+
+                @include block-arrow(right);
+            }
         }
     }
 
-    &-content {
+    &Content {
         position: relative;
 
         display: flex;
@@ -117,16 +114,16 @@ $dot-size: 8px;
         }
     }
 
-    &-body {
+    &Body {
         margin-top: .5em;
         color: #222222;
     }
 
-    &-image {
+    &Image {
         max-height: 100px;
     }
 
-    &-link {
+    &Link {
         display: inline-block;
         line-height: 30px;
         padding: 0 16px;
@@ -190,17 +187,20 @@ $dot-size: 8px;
     /**
      * Анимации
      */
-    &__hidden {
+    &Date,
+    &Content {
         visibility: hidden;
     }
 
-    &__show {
+    &_visible &Date,
+    &_visible &Content {
         visibility: visible;
         animation: timeline-show-right .4s;
     }
 
     @media screen and (max-width: 680px) {
         $line-dot-left: 2%;
+
         &::after {
             left: $line-dot-left;
         }
@@ -211,7 +211,7 @@ $dot-size: 8px;
     }
 
     @media screen and (min-width: $breakpoint-pad) {
-        &__show#{'.timeline-entry-date-wrap'} {
+        &_visible &Date {
             animation: timeline-show-left .4s;
         }
     }

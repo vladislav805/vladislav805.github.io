@@ -45,7 +45,7 @@
 
         "react/button-has-type": "off",
         "react/display-name": "off",
-        "react/jsx-closing-bracket-location": [1, "after-props"],
+        "react/jsx-closing-bracket-location": [1, "line-aligned"],
         "react/jsx-indent": [2, 4, { "indentLogicalExpressions": true, "checkAttributes": true }],
         "react/jsx-indent-props": [2, 4],
         "react/jsx-one-expression-per-line": "off",

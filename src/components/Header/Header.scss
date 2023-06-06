@@ -1,7 +1,7 @@
 @import '../../common.scss';
 
-.header,
-.header-content {
+.Header,
+.Header-Content {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -12,7 +12,7 @@
     }
 }
 
-.header {
+.Header {
     height: 80vh;
     min-height: 420px;
 
@@ -26,7 +26,7 @@
 
     color: #FFFFFF;
 
-    &-content {
+    &-Content {
         padding: 40px 20px;
 
         @media screen and (min-width: $breakpoint-mobile) {
@@ -36,7 +36,7 @@
         }
     }
 
-    &-photo {
+    &-Photo {
         width: 200px;
         height: 200px;
         display: flex;
@@ -52,7 +52,7 @@
         }
     }
 
-    &-aside {
+    &-Aside {
         margin-top: 32px;
     }
 
@@ -60,7 +60,7 @@
         height: 70vh;
         min-height: 420px;
 
-        &-aside {
+        &-Aside {
             margin-top: 0;
             margin-left: 32px;
         }

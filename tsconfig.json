@@ -4,6 +4,7 @@
         "module": "esnext",
         "moduleResolution": "node",
         "target": "esnext",
+        "strict": true,
         "sourceMap": true,
         "esModuleInterop": true,
         "lib": ["dom", "es6"],
@@ -11,7 +12,13 @@
         "noImplicitReturns": false,
         "noImplicitAny": true,
         "skipLibCheck": true,
-        "importsNotUsedAsValues": "error"
+        "importsNotUsedAsValues": "error",
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@typings": ["src/typings"],
+            "@typings/*": ["src/typings/*"]
+        }
     },
     "include": [
         "src/**/*"

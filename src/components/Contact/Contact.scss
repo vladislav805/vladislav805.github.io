@@ -1,0 +1,15 @@
+.Contact {
+    $height: 30px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-grow: 33.33%;
+
+    line-height: $height;
+
+    text-decoration: none;
+    color: #000000;
+}

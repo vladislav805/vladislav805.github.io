@@ -1,23 +1,21 @@
-import * as React from 'react';
+import React from 'react';
+
 import photo from '../../images/photo-main.webp';
-import type { ILocale } from '../../locales';
 
-import styles from './Header.scss';
+import type { IHeaderProps } from './Header.typings';
 
-type IHeaderProps = {
-    locale: ILocale;
-};
+import './Header.scss';
 
-export const Header: React.FC<IHeaderProps> = ({ locale: { header: { photoAlt, name, position, location } } }) => (
-    <div className={styles.header}>
-        <div className={styles['header-content']}>
-            <div className={styles['header-photo']}>
-                <img src={photo} alt={photoAlt} />
+export const Header: React.FC<IHeaderProps> = ({ locale: { header } }) => (
+    <div className="Header">
+        <div className="Header-Content">
+            <div className="Header-Photo">
+                <img src={photo} alt={header.photoAlt} />
             </div>
-            <div className={styles['header-aside']}>
-                <h1 className={styles['header-name']}>{name}</h1>
-                <h2 className={styles['header-position']}>{position}</h2>
-                <h3 className={styles['header-location']}>{location}</h3>
+            <div className="Header-Aside">
+                <h1 className="Header-Name">{header.name}</h1>
+                <h2 className="Header-Position">{header.position}</h2>
+                <h3 className="Header-Location">{header.location}</h3>
             </div>
         </div>
     </div>

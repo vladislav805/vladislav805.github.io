@@ -1,4 +1,4 @@
-import type { ILocale } from './types';
+import type { ILocale } from '../typings/ILocale';
 
 export default {
     header: {
