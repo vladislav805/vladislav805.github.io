@@ -1,5 +1,5 @@
 import React from 'react';
-import { siTelegram } from 'simple-icons/icons';
+import { siTelegram } from 'simple-icons';
 import { mdiEmailOutline, mdiGithub } from '@mdi/js';
 
 import { Contact } from '@components/Contact';

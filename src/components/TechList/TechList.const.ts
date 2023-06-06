@@ -1,5 +1,5 @@
 import { cn } from '@bem-react/classname';
-import { siVk, siTelegram } from 'simple-icons/icons';
+import { siVk, siTelegram } from 'simple-icons';
 import {
     mdiLanguageHtml5,
     mdiLanguageCss3,
