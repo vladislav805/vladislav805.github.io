@@ -1,26 +1,31 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+import { resolve } from 'path';
+
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 const mode = isProduction ? 'production' : 'development';
 
+const root = resolve(process.cwd());
+const src = resolve(root, 'src');
+const dist = resolve(root, 'dist');
+
 /** @type {import('webpack').Configuration} */
-module.exports = {
+export default {
     mode,
     target: 'web',
-    context: path.resolve('src'),
+    context: src,
 
     entry: {
-        main: path.resolve('src', 'index.tsx'),
+        main: resolve(src, 'index.tsx'),
     },
 
     output: {
-        path: path.resolve('build'),
+        path: dist,
         filename: 'static/js/[name]-[contenthash:8].js',
         assetModuleFilename: 'static/asset/[name]-[contenthash:8][ext]',
     },
@@ -81,7 +86,7 @@ module.exports = {
             VERSION: process.env.npm_package_version,
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve('public', 'index.ejs'),
+            template: resolve(root, 'public', 'index.ejs'),
             minify: {
                 collapseWhitespace: true,
                 html5: true,
@@ -107,7 +112,7 @@ module.exports = {
     ],
     devtool: 'source-map',
     devServer: {
-        static: path.resolve('src'),
+        static: src,
         host: '0.0.0.0',
         port: 8080,
     },
