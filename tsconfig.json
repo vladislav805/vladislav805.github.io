@@ -12,7 +12,7 @@
         "noImplicitReturns": false,
         "noImplicitAny": true,
         "skipLibCheck": true,
-        "importsNotUsedAsValues": "error",
+        "verbatimModuleSyntax": true,
         "baseUrl": ".",
         "paths": {
             "@components/*": ["src/components/*"],
