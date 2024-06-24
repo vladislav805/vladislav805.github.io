@@ -40,7 +40,7 @@ export default [
         id: 7,
         name: 'sights',
         view: {
-            href: 'https://sights.veluga.dev/',
+            href: 'https://sights.velu.ga/',
             label: 'Link',
         },
         status: {
@@ -54,7 +54,7 @@ export default [
         id: 6,
         name: 'rfm',
         view: {
-            href: 'https://rfm.veluga.dev/',
+            href: 'https://rfm.velu.ga/',
             label: 'Link',
         },
         status: {
