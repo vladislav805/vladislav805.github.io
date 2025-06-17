@@ -18,7 +18,7 @@ export default [
             height: 50,
         },
         dateColor: '#ee252c',
-        used: [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.WEBPACK, Tech.ESLINT],
+        used: [Tech.HTML5, Tech.SCSS, Tech.TS, Tech.REACT, Tech.POSTCSS, Tech.WEBPACK, Tech.ESLINT],
     },
     {
         id: 8,
@@ -141,6 +141,6 @@ export default [
             height: 62,
         },
         dateColor: '#567ca4',
-        used: [Tech.HTML5, Tech.TS, Tech.PHP, Tech.VK, Tech.WEBPACK, Tech.ESLINT, Tech.SCSS],
+        used: [Tech.HTML5, Tech.TS, Tech.PHP, Tech.VK, Tech.POSTCSS, Tech.WEBPACK, Tech.ESLINT, Tech.SCSS],
     },
 ] as IProject[];

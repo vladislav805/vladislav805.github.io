@@ -1,5 +1,5 @@
 import { cn } from '@bem-react/classname';
-import { siVk, siTelegram } from 'simple-icons';
+import { siVk, siTelegram, siPostcss } from 'simple-icons';
 import {
     mdiLanguageHtml5,
     mdiLanguageCss3,
@@ -27,6 +27,7 @@ export const techIcons: Record<Tech, string> = {
     [Tech.REACT]: mdiReact,
     [Tech.WEBPACK]: mdiWebpack,
     [Tech.ESLINT]: mdiEslint,
+    [Tech.POSTCSS]: siPostcss.path,
     [Tech.PHP]: mdiLanguagePhp,
     [Tech.VSC]: mdiMicrosoftVisualStudioCode,
     [Tech.ANDROID]: mdiAndroid,
@@ -43,6 +44,7 @@ export const techNames: Record<Tech, string> = {
     [Tech.REACT]: 'React',
     [Tech.WEBPACK]: 'webpack',
     [Tech.ESLINT]: 'ESLint',
+    [Tech.POSTCSS]: 'PostCSS',
     [Tech.PHP]: 'PHP',
     [Tech.VSC]: 'Visual Studio Code',
     [Tech.ANDROID]: 'Android',
