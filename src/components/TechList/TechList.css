@@ -4,7 +4,7 @@
 }
 
 .TechList-Tooltip {
-    --local-animation-duration: .075s;
+    --local-animation-duration: 0.075s;
     --local-animation-fx: ease-in-out;
 
     pointer-events: none;
@@ -17,12 +17,12 @@
     line-height: 1.6rem;
     padding: 0 8px;
 
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 4px;
     color: #ffffff;
     opacity: 0;
 
-    transform: translate(-50%, 100%) scale(.2);
+    transform: translate(-50%, 100%) scale(0.2);
     transform-origin: center;
     transition:
         transform var(--local-animation-duration) var(--local-animation-fx),
@@ -41,7 +41,7 @@
 }
 
 .TechList-Icon_small {
-    transform: scale(.8);
+    transform: scale(0.8);
 }
 
 .TechList_all {

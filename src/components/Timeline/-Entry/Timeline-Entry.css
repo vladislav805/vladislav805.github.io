@@ -17,7 +17,7 @@
         width: 8px;
         height: 8px;
 
-        content: "";
+        content: '';
         display: block;
 
         position: absolute;
@@ -33,7 +33,7 @@
      * Линия
      */
     &::before {
-        content: "";
+        content: '';
         display: block;
 
         position: absolute;
@@ -143,7 +143,7 @@
     }
 
     &::after {
-        content: "";
+        content: '';
         display: table;
         clear: both;
     }
@@ -160,7 +160,7 @@
 }
 
 .Timeline-EntryBody {
-    margin-top: .5em;
+    margin-top: 0.5em;
     color: #222222;
 }
 
@@ -175,10 +175,10 @@
     text-decoration: none;
     color: #222222;
     margin: 6px 0;
-    transition: background .1s ease-in-out;
+    transition: background 0.1s ease-in-out;
 
     &:hover {
-        background: rgba(0, 0, 0, .1);
+        background: rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -193,12 +193,12 @@
 .Timeline-Entry_visible .Timeline-EntryDate,
 .Timeline-Entry_visible .Timeline-EntryContent {
     visibility: visible;
-    animation: timeline-show-right .4s;
+    animation: timeline-show-right 0.4s;
 }
 
 @media screen and (min-width: 680px) {
     .Timeline-Entry_visible .Timeline-EntryDate {
-        animation: timeline-show-left .4s;
+        animation: timeline-show-left 0.4s;
     }
 }
 

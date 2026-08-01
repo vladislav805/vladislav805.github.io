@@ -5,14 +5,19 @@
 
     padding: 16px;
 
-    font-size: .9em;
+    font-size: 0.9em;
 
     background: #202020;
-    color: #9F9F9F;
-
+    color: #9f9f9f;
 }
 
 .Footer-Language {
+    padding: 0;
+    border: 0;
+
+    background: transparent;
     cursor: pointer;
+    font: inherit;
+    text-decoration: underline;
     color: inherit;
 }

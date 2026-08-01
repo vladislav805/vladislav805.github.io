@@ -19,11 +19,6 @@
             "@typings/*": ["./src/typings/*"]
         }
     },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules/*",
-        "src/tests/*"
-    ]
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/*", "src/tests/*"]
 }

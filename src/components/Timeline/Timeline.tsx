@@ -16,7 +16,7 @@ export const Timeline: React.FC<ITimelineProps> = ({ primaryColor, projects, loc
                         key={project.id}
                         project={project}
                         locale={locale}
-                        link={view ? { href: project.view.href, label: view } : undefined}
+                        link={view && project.view ? { href: project.view.href, label: view } : undefined}
                         title={title}
                         description={description}
                     />

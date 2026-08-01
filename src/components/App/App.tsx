@@ -33,10 +33,13 @@ export const App: React.FC<IAppProps> = ({ projects, locale }) => {
         locale.setLanguage(currentLocaleName);
     }, [locale, localeName]);
 
-    const onChangeLocale = React.useCallback((localeName: string): void => {
-        locale.setLanguage(localeName);
-        setLocaleName(localeName);
-    }, [locale]);
+    const onChangeLocale = React.useCallback(
+        (newLocaleName: string): void => {
+            locale.setLanguage(newLocaleName);
+            setLocaleName(newLocaleName);
+        },
+        [locale],
+    );
 
     return (
         <>

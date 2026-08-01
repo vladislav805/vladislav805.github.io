@@ -4,7 +4,7 @@ import { Tech } from '@typings';
 import imageYaLogo from './images/yandex.svg';
 import imageAPIdogLogo from './images/apidog.svg';
 
-export default [
+export const projects: IProject[] = [
     {
         id: 9,
         name: 'yandex_2021',
@@ -143,4 +143,4 @@ export default [
         dateColor: '#567ca4',
         used: [Tech.HTML5, Tech.TS, Tech.PHP, Tech.VK, Tech.POSTCSS, Tech.WEBPACK, Tech.ESLINT, Tech.SCSS],
     },
-] as IProject[];
+];

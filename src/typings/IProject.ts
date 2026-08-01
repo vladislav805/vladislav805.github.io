@@ -6,9 +6,9 @@ import type { Tech } from './Tech';
 export interface IProject {
     id: number;
     name: string;
-    view: IProjectViewLink;
+    view?: IProjectViewLink;
     status: IProjectStatus;
-    logo: IProjectLogo;
+    logo?: IProjectLogo;
     dateColor: string;
     used: Tech[];
 }

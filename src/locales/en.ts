@@ -25,23 +25,21 @@ export default {
         items: {
             yandex_2021: {
                 title: 'Yandex',
-                description: [
-                    'Frontend developer at Yandex',
-                ],
+                description: ['Frontend developer at Yandex'],
             },
             yandex_2019: {
                 title: 'Yandex',
                 description: [
                     'Frontend trainee-developer at Yandex',
-                    'Developed internal products for Yandex SERP and received the first colossal experience in the team '
-                    + 'work on the product',
+                    'Developed internal products for Yandex SERP and received the first colossal experience in the team ' +
+                        'work on the product',
                 ],
             },
             sights: {
                 title: 'Sights map',
                 description: [
-                    'A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, '
-                    + 'Krasnodar, Veliky Novgorod and not only',
+                    'A site with a lot of data on informal sights of St. Petersburg, Leningrad region, Rostov-on-Don, ' +
+                        'Krasnodar, Veliky Novgorod and not only',
                     '',
                     'In 2021, the project was completely rewritten in TypeScript.',
                 ],
@@ -49,16 +47,12 @@ export default {
             },
             rfm: {
                 title: 'RFM radio app',
-                description: [
-                    'Android application to use hardware radio on smartphones with QualComm processors.',
-                ],
+                description: ['Android application to use hardware radio on smartphones with QualComm processors.'],
                 view: 'Link',
             },
             suai: {
                 title: 'Chat-bot for Telegram: SUAI Private Account',
-                description: [
-                    'An unofficial client-bot that works with the personal accounts of students of SUAI.',
-                ],
+                description: ['An unofficial client-bot that works with the personal accounts of students of SUAI.'],
                 view: 'Open in Telegram',
             },
             shortMeter: {
@@ -71,16 +65,14 @@ export default {
             },
             nadia: {
                 title: 'Site for Nadia Ivanova',
-                description: [
-                    'Site-card for the film director.',
-                ],
+                description: ['Site-card for the film director.'],
                 view: 'Link',
             },
             onlineRadio: {
                 title: 'Online Radio Collection',
                 description: [
-                    'Simple, easy, comfortable and functional player of online radio stations. You can choose the quality, '
-                    + 'some know the current track. Able to count traffic usage approximately.',
+                    'Simple, easy, comfortable and functional player of online radio stations. You can choose the quality, ' +
+                        'some know the current track. Able to count traffic usage approximately.',
                     'Works on both PC and mobile.',
                 ],
                 view: 'Link',
@@ -89,13 +81,13 @@ export default {
                 title: 'APIdog',
                 description: [
                     'APIdog — web client for VK.com',
-                    'An alternative multifunctional web client for the VK social network, using API and written almost '
-                    + 'entirely in Vanilla JavaScript.',
-                    'Site developed discontinued around 2017. In 2020, it was almost completely rewritten to ES6 using '
-                    + 'webpack + babel and SCSS, after a couple of months - to TypeScript.',
+                    'An alternative multifunctional web client for the VK social network, using API and written almost ' +
+                        'entirely in Vanilla JavaScript.',
+                    'Site developed discontinued around 2017. In 2020, it was almost completely rewritten to ES6 using ' +
+                        'webpack + babel and SCSS, after a couple of months - to TypeScript.',
                 ],
                 view: 'Link',
             },
         },
     },
-} as unknown as ILocale;
+} satisfies Pick<ILocale, 'header' | 'about' | 'contacts' | 'timeline'>;

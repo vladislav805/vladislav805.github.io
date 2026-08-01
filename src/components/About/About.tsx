@@ -31,9 +31,6 @@ export const About: React.FC<IAboutProps> = ({ locale: { about } }) => (
 
         <p>{about.androidDevShort}</p>
         <h2>{about.skills}</h2>
-        <TechList
-            isAll
-            items={skillsItems}
-        />
+        <TechList isAll items={skillsItems} />
     </div>
 );

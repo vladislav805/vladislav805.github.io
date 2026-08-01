@@ -42,11 +42,13 @@ export default {
             {
                 test: /\.css$/,
                 use: [
-                    isProduction ? {
-                        loader: rspack.CssExtractRspackPlugin.loader,
-                    } : {
-                        loader: 'style-loader'
-                    },
+                    isProduction
+                        ? {
+                              loader: rspack.CssExtractRspackPlugin.loader,
+                          }
+                        : {
+                              loader: 'style-loader',
+                          },
                     {
                         loader: 'css-loader',
                     },

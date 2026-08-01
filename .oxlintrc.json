@@ -1,0 +1,23 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "ignorePatterns": ["src/tests/**"],
+    "plugins": ["typescript", "react", "import", "jsx-a11y", "oxc"],
+    "categories": {
+        "correctness": "error",
+        "suspicious": "warn"
+    },
+    "options": {
+        "typeAware": true
+    },
+    "rules": {
+        "import/no-unassigned-import": "off",
+        "react/exhaustive-deps": "warn",
+        "react/rules-of-hooks": "error",
+        "typescript/no-explicit-any": "warn",
+        "typescript/no-non-null-assertion": "warn"
+    }
+}
