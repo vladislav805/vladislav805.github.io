@@ -2,7 +2,7 @@
     "compilerOptions": {
         "jsx": "preserve",
         "module": "esnext",
-        "moduleResolution": "node",
+        "moduleResolution": "bundler",
         "target": "esnext",
         "strict": true,
         "sourceMap": true,
@@ -13,11 +13,10 @@
         "noImplicitAny": true,
         "skipLibCheck": true,
         "verbatimModuleSyntax": true,
-        "baseUrl": ".",
         "paths": {
-            "@components/*": ["src/components/*"],
-            "@typings": ["src/typings"],
-            "@typings/*": ["src/typings/*"]
+            "@components/*": ["./src/components/*"],
+            "@typings": ["./src/typings"],
+            "@typings/*": ["./src/typings/*"]
         }
     },
     "include": [

@@ -10,7 +10,8 @@
     "lint:es": "eslint --cache --quiet --ext .ts,.tsx src",
     "lint:style": "stylelint src/",
     "lint": "npm-run-all lint:es lint:style",
-    "deploy": "cd dist && rsync --archive --compress --delete . vlad805@135.181.147.70:/home/vlad805/projects/veluga/"
+    "deploy": "cd dist && rsync --archive --compress --delete . vlad805@135.181.147.70:/home/vlad805/projects/veluga/",
+    "typechecking": "tsc --noEmit"
   },
   "author": "vladislav805",
   "license": "ISC",
