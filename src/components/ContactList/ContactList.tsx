@@ -6,7 +6,7 @@ import { Contact } from '@components/Contact';
 
 import type { IContactListProps } from './ContactList.typings';
 
-import './ContactList.scss';
+import './ContactList.css';
 
 export const ContactList: React.FC<IContactListProps> = ({ locale }) => (
     <div className="ContactList">

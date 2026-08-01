@@ -10,8 +10,9 @@
     background: #202020;
     color: #9F9F9F;
 
-    &-Language {
-        cursor: pointer;
-        color: inherit;
-    }
+}
+
+.Footer-Language {
+    cursor: pointer;
+    color: inherit;
 }

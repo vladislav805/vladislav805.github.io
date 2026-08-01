@@ -40,7 +40,7 @@ export default {
                 exclude: /\/node_modules\//,
             },
             {
-                test: /\.s?css$/,
+                test: /\.css$/,
                 use: [
                     isProduction ? {
                         loader: rspack.CssExtractRspackPlugin.loader,
@@ -51,7 +51,13 @@ export default {
                         loader: 'css-loader',
                     },
                     {
-                        loader: 'sass-loader',
+                        loader: 'builtin:lightningcss-loader',
+                        options: {
+                            errorRecovery: false,
+                            include: {
+                                nesting: true,
+                            },
+                        },
                     },
                 ],
                 sideEffects: true,

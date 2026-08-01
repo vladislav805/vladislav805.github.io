@@ -6,7 +6,7 @@ import { App } from '@components/App';
 import projects from './projects';
 import locales from './locales';
 
-import './general.scss';
+import './general.css';
 
 const rootElement = document.getElementById('root') as HTMLElement;
 const app = <App locale={locales} projects={projects} />;

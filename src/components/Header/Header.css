@@ -1,0 +1,124 @@
+.Header,
+.Header-Content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 580px) {
+        flex-direction: row;
+    }
+}
+
+.Header {
+    height: 80vh;
+    min-height: 420px;
+
+    background-image: url('../../images/main-bg.webp');
+    background-repeat: no-repeat;
+    background-position: center -10px;
+    background-attachment: fixed;
+    background-color: #0B0A04;
+    background-size: cover;
+
+    color: #FFFFFF;
+}
+
+.Header-Content {
+    padding: 40px 20px;
+
+    @media screen and (min-width: 580px) {
+        width: 80%;
+        max-width: 900px;
+        padding: unset;
+    }
+}
+
+.Header-Photo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 580px) and (max-width: 579px) {
+        width: 170px;
+        height: 170px;
+    }
+
+    & img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.Header-Aside {
+    margin-top: 32px;
+}
+
+@media screen and (min-width: 580px) {
+    .Header {
+        height: 70vh;
+        min-height: 420px;
+    }
+
+    .Header-Aside {
+        margin-top: 0;
+        margin-left: 32px;
+    }
+}
+
+@media screen and (max-width: 579px) {
+    .Header {
+        text-align: center;
+    }
+}
+
+.Header {
+    & h1,
+    & h2,
+    & h3 {
+        font-weight: normal;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    /**
+     * Headers h1-h3
+     */
+    & h1 {
+        font-size: 2em;
+
+        @media screen and (min-width: 580px) {
+            font-size: 2.1em;
+        }
+
+        @media screen and (min-width: 680px) {
+            font-size: 3em;
+        }
+    }
+
+    & h2 {
+        font-size: 1.4em;
+
+        @media screen and (min-width: 580px) {
+            font-size: 1.5em;
+            text-align: left;
+        }
+
+        @media screen and (min-width: 680px) {
+            font-size: 1.7em;
+        }
+    }
+
+    & h3 {
+        font-size: 1.1em;
+
+        @media screen and (min-width: 580px) {
+            font-size: 1.15em;
+        }
+
+        @media screen and (min-width: 680px) {
+            font-size: 1.2em;
+        }
+    }
+}

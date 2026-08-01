@@ -5,7 +5,7 @@ import { Tech } from '@typings';
 
 import type { IAboutProps } from './About.typings';
 
-import './About.scss';
+import './About.css';
 
 const skillsItems: Tech[] = [
     Tech.HTML5,

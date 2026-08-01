@@ -7,7 +7,7 @@ import { cnTimeline } from '../Timeline.const';
 import { renderProjectDates } from '../Timeline.utils/renderProjectDates';
 import type { ITimelineEntryProps } from './Timeline-Entry.typings';
 
-import './Timeline-Entry.scss';
+import './Timeline-Entry.css';
 
 const visibilityOffset = { bottom: 50 };
 

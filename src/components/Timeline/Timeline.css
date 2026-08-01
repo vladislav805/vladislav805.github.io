@@ -1,0 +1,8 @@
+.Timeline {
+    width: auto;
+}
+
+.Timeline-Inner {
+    display: flex;
+    flex-flow: column nowrap;
+}

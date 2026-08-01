@@ -1,0 +1,49 @@
+.TechList {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.TechList-Tooltip {
+    --local-animation-duration: .075s;
+    --local-animation-fx: ease-in-out;
+
+    pointer-events: none;
+    white-space: nowrap;
+
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+
+    line-height: 1.6rem;
+    padding: 0 8px;
+
+    background: rgba(0, 0, 0, .8);
+    border-radius: 4px;
+    color: #ffffff;
+    opacity: 0;
+
+    transform: translate(-50%, 100%) scale(.2);
+    transform-origin: center;
+    transition:
+        transform var(--local-animation-duration) var(--local-animation-fx),
+        opacity var(--local-animation-duration) var(--local-animation-fx);
+}
+
+.TechList-Item {
+    position: relative;
+    margin: 0 4px 4px 0;
+    line-height: 0;
+
+    &:hover .TechList-Tooltip {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+
+.TechList-Icon_small {
+    transform: scale(.8);
+}
+
+.TechList_all {
+    justify-content: center;
+}

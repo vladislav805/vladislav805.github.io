@@ -4,7 +4,7 @@ import { TimelineEntry } from './-Entry';
 import type { ITimelineProps } from './Timeline.typings';
 import { timelineCn, timelineInnerCn } from './Timeline.const';
 
-import './Timeline.scss';
+import './Timeline.css';
 
 export const Timeline: React.FC<ITimelineProps> = ({ primaryColor, projects, locale }) => (
     <div className={timelineCn}>

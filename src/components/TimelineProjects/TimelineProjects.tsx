@@ -4,7 +4,7 @@ import { Timeline } from '@components/Timeline';
 
 import type { ITimelineProjectsProps } from './TimelineProjects.typings';
 
-import './TimelineProjects.scss';
+import './TimelineProjects.css';
 
 export const TimelineProjects: React.FC<ITimelineProjectsProps> = ({ locale, projects }) => (
     <div className="TimelineProjects">

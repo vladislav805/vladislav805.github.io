@@ -3,7 +3,7 @@ import Icon from '@mdi/react';
 
 import type { IContactProps } from './Contact.typings';
 
-import './Contact.scss';
+import './Contact.css';
 
 export const Contact: React.FC<IContactProps> = ({ label, icon, link }) => (
     <a

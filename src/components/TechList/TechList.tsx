@@ -6,7 +6,7 @@ import { Tech } from '@typings';
 import { cnTechList, techIcons, techNames } from './TechList.const';
 import type { ISkillsProps } from './TechList.typings';
 
-import './TechList.scss';
+import './TechList.css';
 
 const needPadding = (tech: Tech) => tech === Tech.VK || tech === Tech.TELEGRAM;
 

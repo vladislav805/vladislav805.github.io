@@ -1,0 +1,7 @@
+.About {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 0 20px;
+    /* Для предотвращения горизонтального скролла от тултипа .TechItem. */
+    overflow: hidden;
+}

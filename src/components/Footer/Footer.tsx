@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { IFooterProps } from './Footer.typings';
 
-import './Footer.scss';
+import './Footer.css';
 
 const assoc: Record<string, string> = {
     en: 'ru',

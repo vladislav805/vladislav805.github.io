@@ -1,0 +1,225 @@
+.Timeline-Entry {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+
+    padding-left: 32px;
+
+    @media screen and (min-width: 680px) {
+        flex-direction: row;
+        padding-left: unset;
+    }
+
+    /**
+     * Точка
+     */
+    &::after {
+        width: 8px;
+        height: 8px;
+
+        content: "";
+        display: block;
+
+        position: absolute;
+        left: 270px;
+        top: 17px;
+        border: 4px solid;
+        border-radius: 50%;
+
+        background: white;
+    }
+
+    /**
+     * Линия
+     */
+    &::before {
+        content: "";
+        display: block;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(270px + 6px);
+        width: 4px;
+        background: black;
+    }
+
+    /**
+     * Линия у первого элемента
+     */
+    &:first-child::before {
+        top: 17px;
+    }
+
+    /**
+     * Линия у последнего элемента
+     */
+    &:last-child::before {
+        bottom: calc(100% - 25px - 8px);
+    }
+
+    @media screen and (max-width: 680px) {
+        &::after {
+            left: 2%;
+        }
+
+        &::before {
+            left: calc(2% + 6px);
+        }
+    }
+}
+
+/**
+ * Левая часть
+ */
+.Timeline-EntryDate {
+    /* flex-grow: 1; */
+    max-width: 90%;
+
+    @media screen and (min-width: 680px) {
+        width: 250px;
+    }
+}
+
+.Timeline-EntryDateTime {
+    display: inline-block;
+    height: 50px;
+
+    padding: 0 16px;
+
+    background: #e86971;
+
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 50px;
+    color: #ffffff;
+    white-space: nowrap;
+
+    /*
+    $unshift: calc(100% - #{$arrow-shift});
+    @if ($direction == right) {
+        $path: (
+            0 0,
+            $unshift 0%,
+            100% 50%,
+            $unshift 100%,
+            0% 100%
+        );
+    } @else {
+        $path: (
+            $arrow-shift 0%,
+            100% 0%,
+            100% 100%,
+            $arrow-shift 100%,
+            0% 50%
+        );
+    }
+    */
+
+    -webkit-clip-path: polygon(14px 0%, 100% 0%, 100% 100%, 14px 100%, 0% 50%);
+    clip-path: polygon(14px 0%, 100% 0%, 100% 100%, 14px 100%, 0% 50%);
+
+    @media screen and (min-width: 680px) {
+        width: 100%;
+
+        -webkit-clip-path: polygon(0 0, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 0% 100%);
+        clip-path: polygon(0 0, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 0% 100%);
+    }
+}
+
+.Timeline-EntryContent {
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+
+    margin: 12px 14px 2em;
+
+    @media screen and (min-width: 680px) {
+        margin-top: 0;
+        margin-left: 56px;
+        margin-right: 21px;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    & h3 {
+        display: flex;
+        align-items: center;
+
+        min-height: 50px;
+
+        font-size: 2rem;
+        line-height: 36px;
+    }
+}
+
+.Timeline-EntryBody {
+    margin-top: .5em;
+    color: #222222;
+}
+
+.Timeline-EntryImage {
+    max-height: 100px;
+}
+
+.Timeline-EntryLink {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 16px;
+    text-decoration: none;
+    color: #222222;
+    margin: 6px 0;
+    transition: background .1s ease-in-out;
+
+    &:hover {
+        background: rgba(0, 0, 0, .1);
+    }
+}
+
+/**
+ * Анимации
+ */
+.Timeline-EntryDate,
+.Timeline-EntryContent {
+    visibility: hidden;
+}
+
+.Timeline-Entry_visible .Timeline-EntryDate,
+.Timeline-Entry_visible .Timeline-EntryContent {
+    visibility: visible;
+    animation: timeline-show-right .4s;
+}
+
+@media screen and (min-width: 680px) {
+    .Timeline-Entry_visible .Timeline-EntryDate {
+        animation: timeline-show-left .4s;
+    }
+}
+
+@keyframes timeline-show-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes timeline-show-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

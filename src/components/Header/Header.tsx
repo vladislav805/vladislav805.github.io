@@ -4,7 +4,7 @@ import photo from '../../images/photo-main.webp';
 
 import type { IHeaderProps } from './Header.typings';
 
-import './Header.scss';
+import './Header.css';
 
 export const Header: React.FC<IHeaderProps> = ({ locale: { header } }) => (
     <div className="Header">
