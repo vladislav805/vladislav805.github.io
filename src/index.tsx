@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 
 import { App } from '@components/App';
 
@@ -17,7 +16,7 @@ if (!rootElement) {
 const app = <App locale={locales} projects={projects} />;
 
 if (rootElement.hasChildNodes()) {
-    ReactDOM.hydrateRoot(rootElement, app);
+    hydrateRoot(rootElement, app);
 } else {
-    ReactDOM.createRoot(rootElement).render(app);
+    createRoot(rootElement).render(app);
 }

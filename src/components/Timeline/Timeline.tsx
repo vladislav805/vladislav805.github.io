@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 import { TimelineEntry } from './-Entry';
 import type { ITimelineProps } from './Timeline.typings';
@@ -6,7 +6,7 @@ import { timelineCn, timelineInnerCn } from './Timeline.const';
 
 import './Timeline.css';
 
-export const Timeline: React.FC<ITimelineProps> = ({ primaryColor, projects, locale }) => (
+export const Timeline: FC<ITimelineProps> = ({ primaryColor, projects, locale }) => (
     <div className={timelineCn}>
         <div className={timelineInnerCn} style={{ color: primaryColor }}>
             {projects.map(project => {

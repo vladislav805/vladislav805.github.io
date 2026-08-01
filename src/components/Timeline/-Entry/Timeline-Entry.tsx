@@ -1,4 +1,5 @@
-import React from 'react';
+import { useCallback, useMemo, useState } from 'react';
+import type { FC } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 
 import { TechList } from '@components/TechList';
@@ -11,14 +12,14 @@ import './Timeline-Entry.css';
 
 const visibilityOffset = { bottom: 50 };
 
-export const TimelineEntry: React.FC<ITimelineEntryProps> = props => {
+export const TimelineEntry: FC<ITimelineEntryProps> = props => {
     const { project, title, description, locale, link } = props;
 
-    const [visible, setVisible] = React.useState(false);
+    const [visible, setVisible] = useState(false);
 
-    const date = React.useMemo(() => renderProjectDates(project, locale), [project, locale]);
+    const date = useMemo(() => renderProjectDates(project, locale), [project, locale]);
 
-    const onVisibilitySensorChange = React.useCallback((isVisible: boolean) => {
+    const onVisibilitySensorChange = useCallback((isVisible: boolean) => {
         if (isVisible) {
             setVisible(true);
         }

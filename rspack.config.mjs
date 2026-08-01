@@ -36,6 +36,13 @@ export default {
                 loader: 'builtin:swc-loader',
                 options: {
                     detectSyntax: 'auto',
+                    jsc: {
+                        transform: {
+                            react: {
+                                runtime: 'automatic',
+                            },
+                        },
+                    },
                 },
                 exclude: /\/node_modules\//,
             },

@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 import { TechList } from '@components/TechList';
 import { Tech } from '@typings';
@@ -23,7 +23,7 @@ const skillsItems: Tech[] = [
     Tech.TELEGRAM,
 ];
 
-export const About: React.FC<IAboutProps> = ({ locale: { about } }) => (
+export const About: FC<IAboutProps> = ({ locale: { about } }) => (
     <div className="About">
         <h2>{about.header}</h2>
         <p>{about.whereIAm}</p>

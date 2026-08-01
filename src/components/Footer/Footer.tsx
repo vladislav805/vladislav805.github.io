@@ -1,4 +1,5 @@
-import React from 'react';
+import { useCallback } from 'react';
+import type { FC, MouseEventHandler } from 'react';
 
 import type { IFooterProps } from './Footer.typings';
 
@@ -9,8 +10,8 @@ const assoc: Record<string, string> = {
     ru: 'en',
 };
 
-export const Footer: React.FC<IFooterProps> = ({ onChangeLocale, locale }) => {
-    const onChange = React.useCallback<React.MouseEventHandler<HTMLButtonElement>>(() => {
+export const Footer: FC<IFooterProps> = ({ onChangeLocale, locale }) => {
+    const onChange = useCallback<MouseEventHandler<HTMLButtonElement>>(() => {
         onChangeLocale(assoc[locale.getLanguage()]);
     }, [onChangeLocale, locale]);
 

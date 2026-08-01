@@ -16,6 +16,7 @@
     "rules": {
         "import/no-unassigned-import": "off",
         "react/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "off",
         "react/rules-of-hooks": "error",
         "typescript/no-explicit-any": "warn",
         "typescript/no-non-null-assertion": "warn"

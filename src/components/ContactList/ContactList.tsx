@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import { siTelegram } from 'simple-icons';
 import { mdiEmailOutline, mdiGithub } from '@mdi/js';
 
@@ -8,7 +8,7 @@ import type { IContactListProps } from './ContactList.typings';
 
 import './ContactList.css';
 
-export const ContactList: React.FC<IContactListProps> = ({ locale }) => (
+export const ContactList: FC<IContactListProps> = ({ locale }) => (
     <div className="ContactList">
         <h2>{locale.contacts.header}</h2>
         <div className="ContactList-Items">

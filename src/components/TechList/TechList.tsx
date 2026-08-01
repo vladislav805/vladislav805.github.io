@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import Icon from '@mdi/react';
 
 import { Tech } from '@typings';
@@ -10,7 +10,7 @@ import './TechList.css';
 
 const needPadding = (tech: Tech) => tech === Tech.VK || tech === Tech.TELEGRAM;
 
-export const TechList: React.FC<ISkillsProps> = ({ items, isAll = false }) => (
+export const TechList: FC<ISkillsProps> = ({ items, isAll = false }) => (
     <div className={cnTechList({ all: isAll })}>
         {items.map((tech, i) => (
             <div key={i} className={cnTechList('Item')}>

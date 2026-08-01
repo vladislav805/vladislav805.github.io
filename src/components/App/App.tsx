@@ -1,4 +1,5 @@
-import React from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import type { FC } from 'react';
 
 import { Header } from '@components/Header';
 import { ContactList } from '@components/ContactList';
@@ -14,10 +15,10 @@ const getFromAddress = () => {
     return fromHash() || fromNavigator();
 };
 
-export const App: React.FC<IAppProps> = ({ projects, locale }) => {
-    const [localeName, setLocaleName] = React.useState<string | undefined>(undefined);
+export const App: FC<IAppProps> = ({ projects, locale }) => {
+    const [localeName, setLocaleName] = useState<string | undefined>(undefined);
 
-    React.useEffect(() => {
+    useEffect(() => {
         let currentLocaleName = locale.getLanguage();
 
         if (localeName !== currentLocaleName) {
@@ -33,7 +34,7 @@ export const App: React.FC<IAppProps> = ({ projects, locale }) => {
         locale.setLanguage(currentLocaleName);
     }, [locale, localeName]);
 
-    const onChangeLocale = React.useCallback(
+    const onChangeLocale = useCallback(
         (newLocaleName: string): void => {
             locale.setLanguage(newLocaleName);
             setLocaleName(newLocaleName);
