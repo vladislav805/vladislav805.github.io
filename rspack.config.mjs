@@ -1,10 +1,9 @@
-import { resolve } from 'path';
+// @ts-check
 
-import webpack from 'webpack';
+import { resolve } from 'node:path';
+
+import { rspack } from '@rspack/core';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-import TerserPlugin from 'terser-webpack-plugin';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -14,7 +13,7 @@ const root = resolve(process.cwd());
 const src = resolve(root, 'src');
 const dist = resolve(root, 'dist');
 
-/** @type {import('webpack').Configuration} */
+/** @type {import('@rspack/core').Configuration} */
 export default {
     mode,
     target: 'web',
@@ -26,23 +25,25 @@ export default {
 
     output: {
         path: dist,
-        filename: 'static/js/[name]-[contenthash:8].js',
-        assetModuleFilename: 'static/asset/[name]-[contenthash:8][ext]',
+        filename: 'static/[name]-[contenthash:8].js',
+        assetModuleFilename: 'static/assets/[name]-[contenthash:8][ext]',
     },
 
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'swc-loader',
-                exclude: /node_modules/,
-
+                loader: 'builtin:swc-loader',
+                options: {
+                    detectSyntax: 'auto',
+                },
+                exclude: /\/node_modules\//,
             },
             {
                 test: /\.s?css$/,
                 use: [
                     isProduction ? {
-                        loader: MiniCssExtractPlugin.loader,
+                        loader: rspack.CssExtractRspackPlugin.loader,
                     } : {
                         loader: 'style-loader'
                     },
@@ -57,7 +58,7 @@ export default {
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
-                exclude: /node_modules/,
+                exclude: /\/node_modules\//,
                 type: 'asset/resource',
             },
         ],
@@ -65,24 +66,24 @@ export default {
 
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-
-        plugins: [
-            new TsconfigPathsPlugin(),
-        ],
+        tsConfig: resolve(import.meta.dirname, 'tsconfig.json'),
     },
 
     optimization: {
         minimize: isProduction,
         minimizer: [
-            new TerserPlugin({ extractComments: false }),
+            new rspack.SwcJsMinimizerRspackPlugin({
+                extractComments: false,
+            }),
+            new rspack.LightningCssMinimizerRspackPlugin(),
         ],
     },
 
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: `static/css/[name]-[contenthash:8].css`,
+        new rspack.CssExtractRspackPlugin({
+            filename: `static/[name]-[contenthash:8].css`,
         }),
-        new webpack.EnvironmentPlugin({
+        new rspack.EnvironmentPlugin({
             VERSION: process.env.npm_package_version,
         }),
         new HtmlWebpackPlugin({
@@ -110,7 +111,9 @@ export default {
             }),
         }),
     ],
+
     devtool: 'source-map',
+
     devServer: {
         static: src,
         host: '0.0.0.0',
